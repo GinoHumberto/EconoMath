@@ -1,0 +1,29 @@
+\documentclass[12pt,a4paper]{report}
+
+% Set lang (support for xelatex and lualatex)
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{spanish}
+
+% Enhanced font: Computer Modern Unicode
+\setmainfont{CMU Serif}
+\setsansfont{CMU Sans Serif}
+\setmonofont{CMU Typewriter Text}
+
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \vspace*{\fill}
+    {\Huge \ttfamily Metodos fundamentales de economía matemática \par}
+    \vspace{2cm}
+    {\large \itshape Gino Anci \par}
+    {\small\today\par}
+    \vspace*{\fill}
+\end{titlepage}
+
+\tableofcontents
+
+\include{chapter/01_Naturaleza_economia/main}
+
+\end{document}
