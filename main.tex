@@ -12,12 +12,20 @@
 
 % Incluye imágenes
 \usepackage{graphicx}
+\usepackage{tcolorbox} % Es para cuadros de colores
+\tcbuselibrary{breakable, skins} % Para poder partir un cuadro
 
 % Math package
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{amsthm}
+% Math graphic
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\pgfplotsset{compat=1.18}
 
+% Entornos
+\input{entornos.tex}
 
 \begin{document}
 \begin{titlepage}

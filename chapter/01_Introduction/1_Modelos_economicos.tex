@@ -92,7 +92,7 @@ Los objetos que forman parte de conjunto se los llama \textit{elementos} del con
 
 Un conjunto se puede escribir por
 \begin{itemize}
-    \item Enumeración. Por ejemplo \(\quad S = \{ 1\text{, }2\text{, }3 \}\) 
+    \item Enumeración. Por ejemplo \(\quad S = \{ 1,\, 2,\, 3 \}\) 
     \item Descripción. Por ejemplo \(\quad l = \{ x ~|~ x\text{ es un número entero positivo} \}\)
 \end{itemize}
 
@@ -118,7 +118,7 @@ Cuando queremos decir que un elemento \textbf{no} pertence a un conjunto utiliza
 \[
 8 ~ \notin ~ S
 \]
-\(8\) No pertenece a \(S\), ya que si recordamos \(S = \{ 1\text{, }2\text{, }3 \}\), no incluye ningún elemento más que \(\{ 1\text{, }2\text{, }3\}\)
+\(8\) No pertenece a \(S\), ya que si recordamos \(S = \{ 1,\, 2,\, 3 \}\), no incluye ningún elemento más que \(\{ 1,\, 2,\, 3\}\)
 
 En el caso de \(l\), recordemos que \(l = \{ x ~|~ x\text{ es un número entero positivo} \}\), podemos decir que \(x ~ \in ~ \mathbb{R} \), que quiere
 decir que la variable x puede ser cualquier número que exista en la recta real.
@@ -128,7 +128,7 @@ decir que la variable x puede ser cualquier número que exista en la recta real.
 
 Dos conjuntos son iguales cuando contienen elementos idénticos. Por ejemplo 
 \[
-S_1 = \{2 \text{, } 7 \text{, } \alpha \text{, } f\} \qquad = \qquad S_2 = \{2 \text{, } \alpha \text{, } 7 \text{, } f\}
+S_1 = \{2 ,\,  7 ,\,  \alpha ,\,  f\} \qquad = \qquad S_2 = \{2 ,\,  \alpha ,\,  7 ,\,  f\}
 \]
 
 Como se puede ver el orden de aparición de los elementos en un conjunto es de poca importancia. Sin embargo si se encuentra un solo elemento
@@ -136,7 +136,7 @@ diferente en uno de los conjuntos, esos conjuntos no son iguales.
 
 Un conjunto puede ser un \emph{subconjunto} de otro conjunto. Por ejemplo
 \[
-S = \{2 \text{, } 3 \text{, } 5 \text{, } 7 \text{, } 9\} \qquad \text{y} \qquad T = \{3 \text{, } 7 \}
+S = \{2 ,\,  3 ,\,  5 ,\,  7 ,\,  9\} \qquad \text{y} \qquad T = \{3 ,\,  7 \}
 \]
 Donde \(T\) es un subconjunto de \(S\), ya que todo elemento de \(T\) es un elemento de \(S\).
 Es decir \(T\) es un subconjunto de \(S\), donde si \(x ~\in~ T\) implica que \(x ~\in~ S\). 
@@ -151,7 +151,7 @@ T ~\subset~ S \qquad y \qquad S~ \supset ~T
 Dos conjuntos pueden ser subconjuntos entre sí, lo cual significa que ambos conjuntos son iguales. Es decir si 
 \(S_1 ~=~ S_2\) \quad \(S_1 ~\subset~ S_2~\) y \(~S_2 ~\subset~ S_1\).
 
-A partir del subconjunto \(S = \{1\text{, }3\text{, }5\text{, }7\text{, }9\}\) se pueden formar \(2^5 = 32\) subconjuntos, ya que un subconjunto
+A partir del subconjunto \(S = \{1,\, 3,\, 5,\, 7,\, 9\}\) se pueden formar \(2^5 = 32\) subconjuntos, ya que un subconjunto
 puede ser un elemento del conjunto o un conjunto de elementos.
 
 Todo subconjunto que \textit{no} contiene a \textit{todos} los elementos de \(S\) se llama \emph{subconjunto propio} de \(S\). 
@@ -167,7 +167,7 @@ decir que \(\varnothing \not\subset S\).
 \textit{Todo} conjunto incluye al \textit{conjunto nulo}.
 
 Sabiendo los casos limites explicados anteriormente, podemos afirmar que el conjunto \(S\) puede formar \(32\) elementos. Veamoslo con otro caso,
-donde \(S = \{1 \text{, } 2 \text{, }3\}\). Si quisieramos saber cuantos subconjuntos se pueden formar del conjunto \(S\) 
+donde \(S = \{1 ,\,  2 ,\, 3\}\). Si quisieramos saber cuantos subconjuntos se pueden formar del conjunto \(S\) 
 podemos armar una tabla como se muestra en el cuadro \ref{subconjuntos_del_conjunto_S}.
 \begin{table}[h]
     \centering
@@ -178,10 +178,10 @@ podemos armar una tabla como se muestra en el cuadro \ref{subconjuntos_del_conju
     1 & \{1\} \\
     2 & \{2\} \\
     3 & \{3\} \\
-    4 & \{1 \text{, } 2\} \\
-    5 & \{1 \text{, } 3\} \\
-    6 & \{2 \text{, } 3\} \\
-    7 & \{1 \text{, } 2 \text{, } 3\} \\
+    4 & \{1 ,\,  2\} \\
+    5 & \{1 ,\,  3\} \\
+    6 & \{2 ,\,  3\} \\
+    7 & \{1 ,\,  2 ,\,  3\} \\
     8 & \varnothing \\
     \hline
     \end{tabular}
@@ -201,9 +201,9 @@ Los conjuntos se pueden \emph{unir}, \emph{intersectar} y \emph{complementar}.
 La \emph{unión} de dos conjunto, \(A\) y \(B\) forman un nuevo conjunto que contiene los elementos que pertenecen a \(A\) o \(B\),
 o a \(A\) y \(B\). La unión se simboliza como \(A ~\cup ~ B\).
 
-Si \(A = \{3 \text{, } 5 \text{, } 7 \}\) y \(B = \{2 \text{, } 3 \text{, } 4 \text{, } 8\}\) la union de \(A\) y \(B\) seria
+Si \(A = \{3 ,\,  5 ,\,  7 \}\) y \(B = \{2 ,\,  3 ,\,  4 ,\,  8\}\) la union de \(A\) y \(B\) seria
 \[
-A ~\cup~ B = \{2 \text{, } 3 \text{, } 4 \text{, } 5 \text{, } 7 \text{, } 8\}
+A ~\cup~ B = \{2 ,\,  3 ,\,  4 ,\,  5 ,\,  7 ,\,  8\}
 \]
 
 En este caso \(A\) y \(B\) no son iguales ni disjuntos y ninguno es subconjunto del otro.
@@ -226,10 +226,10 @@ Entonces, decimos que:
 
 El \emph{complemento de un conjunto}. Para entender que es el complemento de un conjunto se tiene que entender el concepto de conjunto universal.
 
-Un \textit{conjunto universal} es un conjunto de \(n\) números que representan el universo de dicho conjunto, supongamos \(U = \{1 \text{, } 2 \text{, }3\}\), 
+Un \textit{conjunto universal} es un conjunto de \(n\) números que representan el universo de dicho conjunto, supongamos \(U = \{1 ,\,  2 ,\, 3\}\), 
 \(U\) representa el universo, vease en la figura \ref{fig_operacion_de_conjuntos} donde \(U = A+\tilde{A} \), es decir, el universo es igual a la sumatoria
-del conjunto \(A\) y el conjunto \(\tilde{A}\), donde \(A = \{1 \text{, }2\}\) y \(\tilde{A} = 3\). Entonces el complemento del conjunto \(A\) es \(\tilde{A}\),
-ya que con este se contienen todos los elementos del universo, es decir, la unión de \(A \cup \tilde{A} = U = \{1 \text{, } 2 \text{, }3\}\).
+del conjunto \(A\) y el conjunto \(\tilde{A}\), donde \(A = \{1 ,\, 2\}\) y \(\tilde{A} = 3\). Entonces el complemento del conjunto \(A\) es \(\tilde{A}\),
+ya que con este se contienen todos los elementos del universo, es decir, la unión de \(A \cup \tilde{A} = U = \{1 ,\,  2 ,\, 3\}\).
 
 Dicho de otra manera
 \[
@@ -240,6 +240,206 @@ El complemento se simboliza con \(\tilde{\phantom{a}}\) y significa \textit{no}.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=0.7\textwidth]{./media/chapter/01_introducation/operacion_de_conjuntos.jpg}
-    \caption{Grafico de operaciones de conjuntos}
+    \caption{Diagrama de Venn}
     \label{fig_operacion_de_conjuntos}
 \end{figure}
+
+El universo tiene un complemento, este es el conjunto nulo, es decir \(\tilde{U} = \varnothing\).
+
+
+
+\subsubsection{Leyes de operaciones con conjuntos}
+
+\paragraph{Ley conmutativa}
+Se utiliza para uniones o intersecciones, donde el orden de los elementos no altera el resultado de la \textit{unión} o 
+\textit{intersección} del conjunto, es decir 
+\[
+A ~\cup ~ B = B ~\cup~ A
+\]
+unir los elementos de \(A\) y \(B\) da el mismo resultado que unir los de \(B\) y \(A\).
+
+En el caso de la intersección los elementos que comparten \(A\) con \(B\) son exactamente los mismos que comparte \(B\) con \(A\),
+simbolicamente
+\[
+A ~\cap ~ B = B ~\cap~ A
+\]
+
+\paragraph{Ley asociativa}
+La unión o intersección de 3 o más conjuntos, supongamos \(A\), \(B\), \(C\) primero unimos o intersectamos dos conjuntos, para luego
+unir o intersectar con el conjunto restante
+\begin{gather*}
+    A ~\cup ~ (B ~\cup~ C) = (A~\cup~B) ~\cup~ C \\
+    A ~\cap ~ (B ~\cap~ C) = (A~\cap~B) ~\cap~ C
+\end{gather*}
+
+Lo cual se puede apreciar en la figura \ref{fig_ley_asociativa_conjuntos}. El orden en el cual se eligan los conjuntos es intrascendente.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{./media/chapter/01_introducation/Leyes_de_conjuntos.jpg}
+    \caption{Representacion grafica de la ley asociativa de \(A\), \(B\), \(C\)}
+    \label{fig_ley_asociativa_conjuntos}
+\end{figure}
+
+\paragraph{Ley distributiva}
+Involucra utilizar tanto la unión y la intersección de manera simultanea. Es similar a distribuir de manera algeibraica.
+
+La \textit{distribución de la unión sobre la intersección}, es aquella en la cual se quiere unir un conjunto, supongamos \(A\) con
+la intersección de \(B\) y \(C\), que seria lo mismo que unir \(A\) con \(B\) y \(A\) con \(C\) para luego ver donde intersectan, es decir
+\[
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+\]
+
+La \textit{distribución de la intersección sobre la unión}, es cuando se quiere intersectar el conjunto, supongamos \(A\) con la unión de \(B\) 
+y \(C\), lo cual sería lo mismo que intersectar \(A\) con \(B\) y \(A\) con \(C\) para luego unir el resultado, es decir
+\[
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\]
+
+Vamos a comprobar y verificar la ley distributiva, dado \(A = \{4 ,\,  5 \}\), \(B = \{3 ,\,  6 ,\, 7\}\) y 
+\(C = \{2 ,\,  3 \}\), basandonos en la distribución de la unión sobre la intersección, donde 
+\[
+A \cup (B \cap C) = (A \cup B) \cap (A \cup C)
+\]
+Para que la operación se vea más prolija, dividamosla en 2 partes 
+\begin{itemize}
+    \item \(A \cup (B \cap C)\) remplazamos: \(\{4 ,\,  5 \} ~\cup~ \{3\} = \{3 ,\,  4 ,\, 5\}\) 
+    \item \((A \cup B) \cap (A \cup C)\) remplazamos: \(\{3 ,\,  4 ,\, 5 ,\,  6 ,\,  7 \} ~\cap~ \{2 ,\,  3 ,\, 4 ,\,  5\} = 
+    \{3 ,\,  4 ,\, 5\} \)
+\end{itemize}
+
+Basandonos en la distribución de la intersección sobre la unión, donde
+\[
+A \cap (B \cup C) = (A \cap B) \cup (A \cap C)
+\]
+Al igual que en el caso anterior vamos a dividir la operación para que sea más prolija
+\begin{itemize}
+    \item \(A \cap (B \cup C)\) remplazamos: \(\{4 ,\,  5 \} ~\cap~ \{2 ,\,  3 ,\,  6 ,\, 7\} = \varnothing\) 
+    \item \((A \cap B) \cup (A \cap C)\) remplazamos: \(\{\varnothing\} ~\cup~ \{\varnothing\} = \varnothing\)
+\end{itemize}
+
+Habiendo concluido nuestras operaciones, podemos confirmar que el resultado para este caso es el mismo, por lo tanto es una ley valida.
+
+
+
+\begin{tcolorbox}[
+  title=Ejercicios de conjuntos,
+  breakable,
+  colback=gray!5,
+  colframe=gray!60
+]
+\begin{enumerate}
+  \item Escribir en notación de conjuntos:
+  \begin{itemize}
+    \item El conjunto de números reales mayores que 34. 
+
+    Respuesta: \(A = \{x \in \mathbb{R}~|~ x > 34\}\)
+    \item El conjunto de números reales mayores que 8 pero menores que 65
+    
+    Respuesta: \(B = \{x ~|~ x > 8 ~\text{y}~ x < 65 \}\)
+  \end{itemize}
+  \item Dado los conjuntos \(S_1 = \{2 ,\,  4 ,\, 6\}\), \(S_2 = \{7 ,\,  2 ,\, 6\}\), 
+  \(S_3 = \{4 ,\,  2 ,\, 6\}\) y \(S_4 = \{2 ,\,  4\}\) responda: 
+    \begin{itemize}
+        \item \(S_1 = S_3\)  Respuesta: Verdadero
+        \item \(S_1 = \mathbb{R}\)  Respuesta: Falso. \(S_1\) es un subconjunto de \(\mathbb{R}\), no es igual.
+        \item \(8 \in S_2\)  Respuesta: Falso
+        \item \(3 \notin S_2\)  Respuesta: Verdadero
+        \item \(4 \notin S_3\)  Respuesta: Falso
+        \item \(S_4 \subset \mathbb{R} \)  Respuesta: Verdadero
+        \item \(S_1 \supset S_4\)  Respuesta: Falso
+        \item \(\varnothing \subset S_2\)  Respuesta: Verdadero
+        \item \(S_3 \supset \{1,2\}\)  Respuesta: Falso
+    \end{itemize}
+  \item En relacion a los conjuntos del problema 2, determinar:
+    \begin{itemize}
+        \item \(S_1 \cup S_2 \text{ Respuesta: } \{2,4,6,7\}\)
+        \item \(S_1 \cup S_2 \text{ Respuesta: } \{2,4,6\}\) 
+        \item \(S_2 \cap S_3 \text{ Respuesta: } \{2,6\}\)
+        \item \(S_2 \cap S_4 \text{ Respuesta: } \{2\}\)
+        \item \(S_4 \cap S_2 \cap S_1 \text{ Respuesta: } \{2\}\)
+        \item \(S_3 \cup S_1 \cup S_4 \text{ Respuesta: } \{2,4,6\}\)
+    \end{itemize}
+   \item ¿Cuál de los encunciados son validos?
+    \begin{itemize}
+        \item \(A\cup A = A\)  Respuesta: Verdadero
+        \item \(A \cap A = A\)  Respuesta: Verdadero
+        \item \(A \cup \varnothing = A\)  Respuesta: Verdadero
+        \item \(A \cup U = U\)  Respuesta: Verdadero
+        \item \(A \cap \varnothing = \varnothing\)  Respuesta: Verdadero
+        \item \(A \cap U = A\)  Respuesta: Verdadero
+        \item El complemento de \(\tilde{A}\) es \(A\).  Respuesta: Verdadero. 
+        
+        El complemento del complemento te devuelve al original. Es como decir: "Lo opuesto de (lo opuesto de A)". Si A~ es "lo que no es A", entonces el complemento de eso es "lo que NO no es A", es decir, A.
+    \end{itemize}
+   \item Enumere los subconjuntos del conjunto \(\{5,6,7\}\)
+   
+   Respuesta: la cantidad de subconjuntos es \(2^3 = 8\)
+   \item Enumere los subconjuntos del conjunto \(\{a,b,c,d\}\)
+   
+   Respuesta: la cantidad de subconjuntos es \(2^4 = 16\)
+\end{enumerate}
+\end{tcolorbox}
+
+
+
+
+\subsection{Relaciones y funciones}
+
+\subsubsection{Pares ordenados}
+
+Un par ordenado es aquel en el cual el \textit{orden} de los elementos tiene importancia. Es decir, es aquel donde 
+\(A = \{a , b\} \neq  A = \{b , a\}\), excepto sí \(a = b\). Los pares, ternas, cuadruplas ordenadas 
+de elementos se pueden llamar en forma colectiva \textit{conjuntos ordenados}, y estos se encierran entre paréntesis 
+y no entre llaves, es decir que cuando queremos denotar que un conjunto es ordenado se haria así \(A = (a , b)\)
+
+\begin{ejemplo}[1]
+    Los pares ordenados serian utiles para mostrar la edad y el peso de cada estudiante de una clase, se pueden formar 
+    pares ordenados de \((edad , peso)\). Podemos ver que \((19 , 127)\) y  \((127 , 19)\) obviamente
+    indican cosa diferentes.
+\end{ejemplo}
+
+En un plano coordenado rectangular (cartesiano), donde el eje \(x\) y el eje \(y\) se cruzan entre si en un angulo 
+recto, dividiendo el plano en cuatro cuadrantes. El plano \(x \, y\) es un conjunto infinitos de puntos, cada
+punto representa un par ordenado donde el primer elemento es \(x\) y el segundo elemento es \(y\). Por lo tanto 
+un el punto \((4 , 2)\) es \(\neq\) que el punto \(2 , 4\). Esto se puede observar en la figura \ref{cuadro_cartesiano}.
+
+\begin{figure}[!ht]
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+
+        % Cuadrícula suave
+        \draw[step=1cm, gray, very thin, dotted] (-4,-2) grid (5,5);
+        
+        % Ejes
+        \draw[->] (-4.4,0) -- (5,0) node[right] {$x$};
+        \draw[->] (0,-2.4) -- (0,5) node[above] {$y$};
+        
+        % Marcas y números eje x
+        \foreach \x in {-4,-3,-2,-1,1,2,3,4}
+            \draw (\x,0.1) -- (\x,-0.1) node[below] {\scriptsize \x};
+        
+        % Marcas y números eje y
+        \foreach \y in {-2,-1,1,2,3,4}
+            \draw (0.1,\y) -- (-0.1,\y) node[left] {\scriptsize \y};
+        
+        % Punto (4,2)
+        \fill (4,2) circle (3pt);
+        \node[above right] at (4,2) {$(4,2)$};
+        
+        % Punto (2,4)
+        \fill (2,4) circle (3pt);
+        \node[above right] at (2,4) {$(2,4)$};
+        
+        % Nombre de los cuadrantes
+        \node[gray!60] at (3,0.5) {\footnotesize Primer cuadrante};
+        \node[gray!60] at (-2.5,0.5) {\footnotesize Segundo cuadrante};
+        \node[gray!60] at (-2.5,-1) {\footnotesize Tercer cuadrante};
+        \node[gray!60] at (3,-1) {\footnotesize Cuarto cuadrante};
+    
+    \end{tikzpicture}
+    \caption{Cuadro cartesiano con sus respectivos puntos \((4 , 2)\) y \((2 , 4)\)}
+    \label{cuadro_cartesiano}
+\end{figure}
+
+
+
