@@ -773,3 +773,51 @@ Es decir que \[x^{1/n}=\sqrt[n]{x}\]
 
 \clearpage
 \subsection{Funciones de dos o más variables independientes}
+
+Una función puede tener dos o más variables independientes. Una función de una variable independiente es \(y=f(x)\), una función de dos variables independientes es
+\[
+z=g(x,y)
+\]
+Un determinado par de valores \(x,y\) determina de manera única un valor de la variable dependiente \(z\). Es decir que \(z\) es igual a 
+\[
+z=ax+by \qquad \text{o} \qquad z = a_0+a_1x+a_2x^2+b_1y+ b_2y^2
+\]
+
+Al igual que la función \(y=f(x)\) que mapea un \textit{dominio} hacia un punto en la \textit{imagen}, la función \(g\) hace lo mismo. Sin embargo, en este caso el dominio no es un conjunto de números, es un conjunto de \textit{pares ordenados} \(x,y\), ya que se puede determinar \(z\) cuando se especifica \(x,y\).
+La función g es un mapeo de un punto en un espacio bidimensional hacia un punto en un segmento de recta (es decir, un punto en un espacio unidimensional), por ejemplo del punto \(x_1, y_1\) hacia el punto \(z_1\) o de \(x_2, y_2\) hacia \(z_2\) como en la figura \ref{grafico_tidimensional_1}.
+
+% \begin{figure}[htbp] % Realizar figura tridimensional 2.9a página 47
+%     a
+% \end{figure}
+
+Si se coloca al eje \(z\) de forma perpendicular vertical al plano \(xy\), como se hizo en la figura \ref{grafico_tridimensional_2}, se obtiene un espacio tridimensional en la cual se le da a la función \(g\) una grafica más aproximada.
+El dominio de esta función es algún subconjunto de los puntos en el plano \(xy\), y el valor de la función (valor \(z\)) para un punto en el dominio, se puede indicar mediante la altura de una recta vertical.
+La relación de las tres variables se resume por una terna ordenada \(x_1,y_1,z_1\), que es el punto específico en el espacio tridimensional.
+El lugar de esa terna ordenada es la que da forma a una superficie, que constituye la gráfica de la función \(g\).
+
+\begin{nota}
+    En economía se utiliza frecuentemente este tipo de funciones tridimensionales. Por ejemplo en las funciones de producción. Donde la producción se determina mediantes cantidades de capital \(k\), y la mano de obra empleada \(L\). Entonces se puede escribir una función de producción como \(Q=Q(K,L)\).
+\end{nota}
+
+Se pueden abarcar tres o más variables independientes. Una función como \(y=h(u,v,w)\), se puede mapear un punto del espacio tridimensional \((u_1, v_1, w_1)\), hacia un punto en un espacio unidimensional \((y_1)\). Está función podria indicar la utilidad del consumidor en relación a su consumo (en este caso de tres artículos).
+La limitación se encuentra en su grafica, hasta ahora no hay un metdo para graficar una funcion de más de tres dimensiones.
+La relación de estas ternas ordenadas, dan un punto en un espacio de más de tres dimensiones, estos puntos aunque no sea posible para el humano realizar, genera una gráfica, a esta gráfica se le llama \textit{hipersuperficie}.
+
+Las funciones de más de una variable se clasifícan en varios tipos. Por ejemplo una función 
+\[
+y=a_1x_1+a_2x_2+\dots+a_nx_n
+\]
+es una función lineal, donde su caracterísitica es que cada variable es elevada sólo a la primera potencia.
+Una función cuadrática, tiene que ver con primeras y segundas potencias de una o más variables independientes, pero la suma de los exponentes de las variables que aparecen en cualquier término simple no debe pasar de 2.
+
+\begin{nota}
+    En lugar de denotar las variables independientes mediante \(x,u,v,w, \dots\), se intercambiaron por \(x_{subíndice}\), es decir \(x_1,_x_2, \dots, x_n\).
+    Este metodo, es una forma en econoía de contear más facil un mayor número de variables que forman parte de la función.
+\end{nota}
+
+\subsection{Niveles de generalidad}
+
+En el análisis económico hay tres niveles de abstracción. El \textit{numérico} que es aquel donde las funciones con coeficientes fijos como \(y=6x+1\) ofrecen soluciones exactas, pero carecen de flexibilidad ante cambios.
+El \textit{paramétrico} es aquel donde el uso de constantes simbólicas \(y=a+bx\) permite crear ``familias de curvas'' y obtener soluciones generales que no requieren repetir todo el procedimiento lógico si los datos cambian.
+Y por ultimo el \textit{nivel general}, que alcanza la máxima aplicabilidad teórica al no restringirse a una forma geométrica específica como \(y=f(x)\). El ultimo sirve de forma económica para saber el comportamiento de la variable, por ejemplo en el caso de la demanda una forma general de describirla seria \(Q=f(p)\) al cual \(f(p)<0\), lo que quiere decir que tiene una pendiente negativa y que anate una subida del precio baja la demanda. Es la regla de comportamiento de la función. Mientras que la numérica y la paramétrica son para resolver una función ya sea de forma general o específica.
+
