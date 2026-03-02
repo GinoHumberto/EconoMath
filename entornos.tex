@@ -1,7 +1,10 @@
 %=============================
 % ENTORNOS PERSONALIZADOS
 
-% Ejemplo
+% Cuadro ejemplo
+\newcounter{example}[section]
+\renewcommand{\theexample}{\thesection.\arabic{example}}
+
 \newtcolorbox{ejemplo}[1][]{
     enhanced,
     breakable,
@@ -15,8 +18,51 @@
     top=6pt,
     bottom=6pt,
     fonttitle=\bfseries,
-    title=Ejemplo~#1,
-    coltitle=black
+    title={Ejemplo~\theexample},
+    coltitle=black,
+    code={\refstepcounter{example}},
+    #1
+}
+
+% Notas
+\newtcolorbox{nota}{
+  enhanced,
+  breakable,
+  colback=gray!6,
+  boxrule=0pt,
+  frame hidden,
+  borderline west={3pt}{0pt}{gray!60},
+  sharp corners,
+  left=8pt,
+  right=8pt,
+  top=6pt,
+  bottom=6pt,
+  fontupper=\small
+}
+
+% Ejercicios 
+\newtcolorbox{ejercicio}[1][]{
+  enhanced,
+  breakable,
+  colback=white,
+  colframe=black!70,      % Color del marco y del título
+  colbacktitle=black!70, % Fondo del título
+  coltitle=white,        % Texto del título en blanco
+  fonttitle=\bfseries\small,
+  title={EJERCICIO #1},   % El título es "EJERCICIO" + lo que tú escribas
+  detach title,
+  % Diseño del encabezado
+  before upper={\textsf{\textbf{\textcolor{black!70}{EJERCICIO #1}}}\smallskip\hrule\medskip\par},
+  boxrule=0pt,
+  frame hidden,
+  borderline north={1.5pt}{0pt}{black!70}, % Línea superior gruesa
+  borderline south={0.5pt}{0pt}{black!20}, % Línea inferior sutil
+  sharp corners,
+  left=0pt,   % Alineado a la izquierda sin sangría
+  right=0pt,
+  top=5pt,
+  bottom=5pt,
+  fontupper=\small
 }
 
 %=============================

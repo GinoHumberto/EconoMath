@@ -3,8 +3,6 @@
 Un modelo económico es una abstracción del mundo real. Consiste en un conjunto de ecuaciones que representan, de manera simplificada, 
 las relaciones entre variables con el fin de describir y analizar la estructura y el comportamiento de un fenómeno, en este caso económico.
 
-
-
 \subsection{Elementos de un modelo matemático}
 
 \subsubsection{Variables, constantes y parámetros}
@@ -114,7 +112,7 @@ Se dice que un elemento pertence a un conjunto cuando este elemento se encuentra
 \]
 En el ejemplo estamos diciendo que tanto \(2 ~\text{como}~ 3\) pertenecen \(\in\) a \(S\)
 
-Cuando queremos decir que un elemento \textbf{no} pertence a un conjunto utilizamos \(\notin\). Por ejemplo
+Cuando queremos decir que un elemento \textit{no} pertence a un conjunto utilizamos \(\notin\). Por ejemplo
 \[
 8 ~ \notin ~ S
 \]
@@ -321,12 +319,7 @@ Habiendo concluido nuestras operaciones, podemos confirmar que el resultado para
 
 
 
-\begin{tcolorbox}[
-  title=Ejercicios de conjuntos,
-  breakable,
-  colback=gray!5,
-  colframe=gray!60
-]
+\begin{ejercicio}
 \begin{enumerate}
   \item Escribir en notación de conjuntos:
   \begin{itemize}
@@ -378,68 +371,7 @@ Habiendo concluido nuestras operaciones, podemos confirmar que el resultado para
    
    Respuesta: la cantidad de subconjuntos es \(2^4 = 16\)
 \end{enumerate}
-\end{tcolorbox}
-
-
-
-
-\subsection{Relaciones y funciones}
-
-\subsubsection{Pares ordenados}
-
-Un par ordenado es aquel en el cual el \textit{orden} de los elementos tiene importancia. Es decir, es aquel donde 
-\(A = \{a , b\} \neq  A = \{b , a\}\), excepto sí \(a = b\). Los pares, ternas, cuadruplas ordenadas 
-de elementos se pueden llamar en forma colectiva \textit{conjuntos ordenados}, y estos se encierran entre paréntesis 
-y no entre llaves, es decir que cuando queremos denotar que un conjunto es ordenado se haria así \(A = (a , b)\)
-
-\begin{ejemplo}[1]
-    Los pares ordenados serian utiles para mostrar la edad y el peso de cada estudiante de una clase, se pueden formar 
-    pares ordenados de \((edad , peso)\). Podemos ver que \((19 , 127)\) y  \((127 , 19)\) obviamente
-    indican cosa diferentes.
-\end{ejemplo}
-
-En un plano coordenado rectangular (cartesiano), donde el eje \(x\) y el eje \(y\) se cruzan entre si en un angulo 
-recto, dividiendo el plano en cuatro cuadrantes. El plano \(x \, y\) es un conjunto infinitos de puntos, cada
-punto representa un par ordenado donde el primer elemento es \(x\) y el segundo elemento es \(y\). Por lo tanto 
-un el punto \((4 , 2)\) es \(\neq\) que el punto \(2 , 4\). Esto se puede observar en la figura \ref{cuadro_cartesiano}.
-
-\begin{figure}[!ht]
-    \centering
-    \begin{tikzpicture}[scale=0.8]
-
-        % Cuadrícula suave
-        \draw[step=1cm, gray, very thin, dotted] (-4,-2) grid (5,5);
-        
-        % Ejes
-        \draw[->] (-4.4,0) -- (5,0) node[right] {$x$};
-        \draw[->] (0,-2.4) -- (0,5) node[above] {$y$};
-        
-        % Marcas y números eje x
-        \foreach \x in {-4,-3,-2,-1,1,2,3,4}
-            \draw (\x,0.1) -- (\x,-0.1) node[below] {\scriptsize \x};
-        
-        % Marcas y números eje y
-        \foreach \y in {-2,-1,1,2,3,4}
-            \draw (0.1,\y) -- (-0.1,\y) node[left] {\scriptsize \y};
-        
-        % Punto (4,2)
-        \fill (4,2) circle (3pt);
-        \node[above right] at (4,2) {$(4,2)$};
-        
-        % Punto (2,4)
-        \fill (2,4) circle (3pt);
-        \node[above right] at (2,4) {$(2,4)$};
-        
-        % Nombre de los cuadrantes
-        \node[gray!60] at (3,0.5) {\footnotesize Primer cuadrante};
-        \node[gray!60] at (-2.5,0.5) {\footnotesize Segundo cuadrante};
-        \node[gray!60] at (-2.5,-1) {\footnotesize Tercer cuadrante};
-        \node[gray!60] at (3,-1) {\footnotesize Cuarto cuadrante};
-    
-    \end{tikzpicture}
-    \caption{Cuadro cartesiano con sus respectivos puntos \((4 , 2)\) y \((2 , 4)\)}
-    \label{cuadro_cartesiano}
-\end{figure}
+\end{ejercicio}
 
 
 
