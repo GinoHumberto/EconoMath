@@ -1,0 +1,283 @@
+\subsection{Equilibrio general de mercado}
+
+En los modelos anteriores, se trataba un mercado aislado, donde \(Q_d\) y \(Q_s\) son funciones del precio de un producto. En la realidad, ningún producto experimenta de tal solitaria existencia. Por lo tanto la función de demanda de un producto debe tomar en cuenta el efecto, no sólo de precio del producto, sino también el de los precios de productos sustitutos y complementarios (productos relacionados). Lo mismo ocurre para la función de oferta.
+
+Una vez que se consideran los precios de otros artículos, la estructura del modelo se debe apliar, para producir los valores de equilibrio de estos otros precios. Como resultado, las variables de precio y cantidad de múltiples productos deben entrar juntos de forma endógena en el modelo.
+
+En un modelo de mercado aislado, la condición de equilibrio consiste en una ecuación, \(Q_d = Q_s\), o bien, \(E \equiv Q_d-Q_s=0 \), donde \(E\) representa la demanda excedente (y si esta es \(0\) equilibramos la función). Cuando se consideran varios artículos independientes, el equilibrio requiere la ausencia de la demanda excedente para cada artículo incluido en el modelo porque, si por lo menos un artículo se enfrenta a un exceso de demanda, el ajuste de precio de ese artículo afectará necesariamente a las cantidades demandadas y ofrecidas de los artículos relacionados. En consecuencia, la condición de equilibrio de un modelo de mercado de \(n\) artículos requerirá \(n\) ecuaciones, una para cada artículo, en la forma 
+\[
+E_i \equiv Q_{di} - Q_{si} = 0 \qquad (i=1,2,\dots,n)
+\]
+Si existe una solución, habrá un conjunto de precio \(P_i^\ast\) y cantidades correspondientes \(Q_i^\ast\) de modo que las \(n\) ecuaciones en la condición de equilibrio se satisfagan simultáneamente.
+
+
+\subsubsection{Modelo de mercado de dos artículos}
+
+Supongamos dos artículos cuyas fundicones de oferta y demanda son lineales. En términos paramétricos, este modelo se puede escribir como 
+\begin{equation}
+    \begin{aligned}
+        & Q_{d1}-Q_{s1}=0 \\
+        & Q_{d1}=a_0+a_1P_1+a_2P_2 \\ 
+        & Q_{s1}=b_0+b_1P_1+b_2P_2 \\
+        & Q_{d2}-Q_{s2}=0 \\
+        & Q_{d2}=\alpha_0+\alpha_1P_1+\alpha_2P_2 \\
+        & Q_{s2}=\beta_0+\beta_1P_1+\beta_2P_2
+    \end{aligned}
+\end{equation}
+
+Donde los coeficientes de \(a\) y \(b\) pertenecen a las funciones de la oferta y demanda del \textit{primer artículo}, y los coeficientes \(\alpha\) y \(\beta\) a los del \textit{segundo artículo}. 
+
+Como un primer paso a la solución de este modelo, se puede recurrir a la eliminación de variables. Si sustituimos las ecuaciones segunda y tercera en la primera, y la quinta y sexta en la cuarta, el modelo se reduce a dos ecuaciones con dos variables 
+\begin{equation}
+    \begin{aligned}
+        & (a_0-b_0)+(a_1-b_1)P_1+(a_2-b_2)P_2=0 \\
+        & (\alpha_0-\beta_0)+(\alpha_1-\beta_1)P_1+(\alpha_2-\beta_2)P_2=0
+    \end{aligned}
+\end{equation}
+
+Aunque éste es un sistema simple de sólo dos ecuaciones, se requieren \(12\) parámetros y las manipulaciones algebraicas resultan difíciles de manejar a menos que se introduzca algún tipo de abreviatura. Así, se definen los símbolos abreviados
+\begin{equation}
+    \begin{aligned}
+        & c_i \equiv a_i-b_i \\
+        & \gamma_i \equiv \alpha_i-\beta_i
+    \end{aligned}
+\end{equation}
+Donde \(i=0,1,2\), es decir que
+\begin{equation}
+    \begin{aligned}
+        & \underbrace{(a_0-b_0)}_{c_0}+\underbrace{(a_1-b_1)}_{c_1}P_1+\underbrace{(a_2-b_2)}_{c_2}P_2=0 \\
+        & \underbrace{(\alpha_0-\beta_0)}_{\gamma_0}+\underbrace{(\alpha_1-\beta_1)}_{\gamma_1}P_1+\underbrace{(\alpha_2-\beta_2)}_{\gamma_2}P_2=0
+    \end{aligned}
+\end{equation}
+
+Entonces, después de pasar los términos \(c_0\) y \(\gamma_0\) al lado derecho, se obtiene 
+\begin{equation}
+    \begin{aligned}
+        & c_1P_1 + c_2P_2 = -c_0 \\
+        & \gamma_1P_1 + \gamma_2P_2=-\gamma_0
+    \end{aligned}
+\end{equation}
+Que se puede resolver mediante eliminación de variables. De la primera ecuación, se encuentra que \(P_2=-(c_0+c_1P_1)/c_2\). Sustituyendo esto en la segunda ecuación
+\[
+\gamma_1P_1+\gamma_2 \left[\frac{-(c_0+c_1P1)}{c_2}\right]=-\gamma_0
+\]
+Teniendo esta expresión comenzamos el proceso de ``limpieza'', donde debemos quitar el denominador \(c_2\) que estorba, por lo tanto multiplicamos la ecuación por \(c_2\)
+\[
+c_2\gamma_1P_1-\gamma_2(c_0+c_1P_1)=-c_2\gamma_0
+\]
+Ahora distribuimos \(\gamma_2\)
+\[
+c_2\gamma_1P_1-\gamma_2c_0-\gamma_2c_1P_1=-c_2\gamma_0
+\]
+Como solo queremos a \(P_1\),pasamos todo lo que no tiene \(P_1\) al lado derecho, quedandonos
+\[
+c_2\gamma_1P_1-\gamma_2c_1P_1=\gamma_2c_0-c_2\gamma_0
+\]
+Ahora podemos sacar factor común de \(P_1\)
+\[
+P_1(c_2\gamma_1-c_1\gamma_2)=c_0\gamma_2-c_2\gamma_0
+\]
+Finalmente pasamos el paréntesis dividiendo 
+\[
+P_1^\ast=\frac{c_0\gamma_2-c_2\gamma_0}{c_2\gamma_1-c_1\gamma_2}
+\]
+Para llegar a la expresión final, multiplicamos el numerador y el denominador por \(-1\) dando como resultado final
+\[
+P_1^\ast=\frac{c_2\gamma_0-c_0\gamma_2}{c_1\gamma_2-c_2\gamma_1}
+\]
+Como ahora tenemos \(P_1^\ast\), podemos conseguir \(P_2^\ast\) mediante el proceso de sustitución directa, para encontrar el equilibrio del segundo artículo. Si sustituimos la ecuación 
+\[
+P_2 = \frac{-(c_0+c_1P_1)}{c_2}
+\]
+Quedandonos
+\[
+P_2 = \frac{-c_0-c_1(\frac{c_2\gamma_0-c_0\gamma_2}{c_1\gamma_2-c_2\gamma_1})}{c_2}
+\]
+Si ahora distribuimos el denominador, nos queda que
+\[
+P_2 = -\frac{c_0}{c_2}-\frac{c_1}{c_2}\times \frac{c_2\gamma_0-c_0\gamma_2}{c_1\gamma_2-c_2\gamma_1}
+\]
+Si realizamos distributiva en el numerador
+\[
+P_2 = -\frac{c_0}{c_2}-\frac{c_1c_2\gamma_0-c_0c_1\gamma_2}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+Si a \(-c_0/c_2\) lo multiplicamos y dividimos por \((c_1\gamma_2-c_2\gamma_1)/(c_1\gamma_2-c_2\gamma_1) = 1\), lo cual en la ecuacion se vería como 
+\[
+P_2 = -\frac{c_0(c_1\gamma_2-c_2\gamma_1)}{c_2(c_1\gamma_2-c_2\gamma_1)}-\frac{c_1c_2\gamma_0-c_0c_1\gamma_2}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+Como el denominador es el mismo, lo podemos expresar de la siguiente manera 
+\[
+P_2 = \frac{-c_0(c_1\gamma_2-c_2\gamma_1)-c_1c_2\gamma_0+c_0c_1\gamma_2}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+Si ahora realizamos distributiva de \(-c_0(c_1\gamma_2-c_2\gamma_1)\), nos queda que 
+\[
+P_2 = \frac{-c_0c_1\gamma_2+c_0c_2\gamma_1-c_1c_2\gamma_0+c_0c_1\gamma_2}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+Como el primero y ultimo término son iguales, los cancelamos, quedando que 
+\[
+P_2 = \frac{c_0c_2\gamma_1-c_1c_2\gamma_0}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+Si realizamos factor común de \(c_2\) en el numerador nos queda que 
+\[
+P_2 = \frac{c_2(c_0\gamma_1-c_1\gamma_0)}{c_2(c_1\gamma_2-c_2\gamma_1)}
+\]
+\(c_2\) se cancela, dandonos el valor de solución de \(P_2^\ast\) que es
+\[
+P_2^\ast=\frac{c_0\gamma_1-c_1\gamma_0}{c_1\gamma_2-c_2\gamma_1}
+\]
+
+Sin embargo, para que los dos valores de \(P^\ast\) tengan sentido, hay ciertas restricciones. Primero, el denominador común no puede ser \(0\), es cecir que \(c_1\gamma_2 \neq c_2\gamma_1\). Segundo, para asegurar que la solución sea positiva, el numerador debe tener el mismo signo que el denominador.
+
+Una vez obtenido los precios de equilibrio, las cantidades de equilibrio \(Q_1^\ast\) y \(Q_2^\ast\) se calculan al sustituir \(P_1^\ast\) y \(P_2^\ast\) en 
+\begin{equation}
+    \begin{aligned}
+        & Q_{d1}=a_0+a_1P_1+a_2P_2 \\ 
+        & Q_{s1}=b_0+b_1P_1+b_2P_2 \\
+        & Q_{d2}=\alpha_0+\alpha_1P_1+\alpha_2P_2 \\
+        & Q_{s2}=\beta_0+\beta_1P_1+\beta_2P_2
+    \end{aligned}
+\end{equation}
+
+
+\subsubsection{Ejemplo numérico}
+
+Suponga que las funciones de oferta y demanda son las siguientes
+\begin{equation}
+    \begin{aligned}
+        & Q_{d1}=10-2P_1+P_2 \\ 
+        & Q_{s1}=-2+3P_1 \\
+        & Q_{d2}=15+P_1-P_2 \\
+        & Q_{s2}=-1+2P_2
+    \end{aligned}
+\end{equation}
+Si observamos, notamos que para cada artículo se ve que la cantidad ofrecida \(Q_{s1}\) depende solamente del precio de ese artċulo \(P_1\), pero la cantidad demandada \(Q_{d1}\) es una función de ambos precios. 
+
+Mientras que el precio del artículo uno \(P_1\) tiene un coeficiente negatívo en \(Q_{d1}\), el coeficiente del precio del segundo artículo es positivo \(P_2\). El hecho de que un aumento en el precio del segundo artículo \(P_2\) tienda a aumentar la cantidad demandada del artículo uno \(Q_{d1}\) hace pensar que los artículos son sustitutos entre sí. El papel del precio del artículo uno \(P_1\) en la función cantidad demandada del artículo dos \(Q_{d2}\) tiene una iterpretación similar. 
+
+Para entender esto mejor. Si incrementa \(P_1\) en la función \(Q_{d1}\), va a reducir la cantidad demandada, ya que la gente va a preferir irse al producto sustitúto. Si aumenta el precio del producto sustitúto \(P_2\), esto significaria un aumento de nuestra demanda \(Q_{d1}\).
+
+Recurrimos a la eliminación de variables, lo que nos queda
+\begin{equation}
+    \begin{aligned}
+        &\text{Caso } c_i \\
+        & 10-2P_1+P_2+2-3P_1 = 0 \\ 
+        & \underbrace{(10+2)}_{c_0 = 12}-\underbrace{(2+3)}_{c_1=-5}P_1+\underbrace{(1-0)}_{c_2=1}P_2=0 \\
+        &\text{Caso }\gamma_i \\
+        & 15+1+P_1-P_2-2P_2=0 \\
+        & \underbrace{(15+1)}_{\gamma_0 = 16}-\underbrace{(1-0)}_{\gamma_1=1}P_1+\underbrace{(-1-2)}_{\gamma_2=-3}P_2=0 
+    \end{aligned}
+\end{equation}
+
+Si ahora sustituimos estos valores en 
+\[
+P_1^\ast=\frac{c_2\gamma_0-c_0\gamma_2}{c_1\gamma_2-c_2\gamma_1} \qquad \qquad P_2^\ast=\frac{c_0\gamma_1-c_1\gamma_0}{c_1\gamma_2-c_2\gamma_1}
+\]
+Nos queda que 
+\[
+P_1^\ast=\frac{54}{14}=\frac{26}{7}=4\frac{5}{7} \qquad \qquad P_2^\ast=\frac{92}{14}=\frac{46}{7}=6\frac{4}{7}
+\]
+Si sustituimos \(P_1^\ast\) y \(P_2\) en 
+\begin{equation}
+    \begin{aligned}
+        & Q_{d1}=10-2P_1+P_2 \\ 
+        & Q_{s1}=-2+3P_1 \\
+        & Q_{d2}=15+P_1-P_2 \\
+        & Q_{s2}=-1+2P_2
+    \end{aligned}
+\end{equation}
+Nos queda que 
+\[
+Q_1^\ast=\frac{64}{7}=9\frac{1}{7} \qquad \qquad Q_2^\ast=\frac{85}{7}=12\frac{1}{7}
+\]
+Para conservar los valores exactos se recomienda expresar los resultados en fracciones. Se puede obtener un gráfico de este modelo de dos artículos. Las ecuaciónes se pueden graficar si se conocen los coeficientes numéricos, y entonces se puede ubicar con presición los resultados.
+
+
+\subsubsection{Caso de n artículos}
+
+El análisis anterior fue limitado a caso de dos artículos, pero es evidente que vamos avanzando del análisis de \textit{equilibrio parcial} al análisis de \textit{equilibrio general}. A medida que hay mas artículos, hay más variables y ecuaciones, incrementando su tamaño y complejidad. 
+
+A pesar que puedan haber coeficientes cero en la determinación del exeso de demanda (la función de exceso de demanda de pianos y el precio de palomitas de maíz puede tener coeficiente cero), con \(n\) artículos, las funciones de oferta y demanda se puede expresar como sigue 
+\begin{equation}
+    \label{caso_n_articulos_ecuacion_1}
+    \begin{aligned}
+        & Q_{di}=Q_{si}(P_1,P_2,\dots,P_n) \\ 
+        & Q_{si}=Q_{di}(P_1,P_2,\dots,P_n) \\
+    \end{aligned}
+\end{equation}
+donde \(i=(1,2,\dots,n)\)
+
+En vista de los subíndices, las dos ecuaciones representan la totalidad de las \(2n\) funciones que contiene el modelo (las cuales no necesariamente son lineales). Además, la condición de equilibrio está compuesta de un conjunto de \(n\) ecuaciones,
+\begin{equation}
+    \label{caso_n_articulos_ecuacion_2}
+    \begin{aligned}
+        Q_{di}-Q_{si}=0
+    \end{aligned}
+\end{equation}
+Cuando se agrega la ecuación \ref{caso_n_articulos_ecuacion_2} a \ref{caso_n_articulos_ecuacion_1} se completa el modelo. Así, se debe contar un total de \(3n\) ecuaciones.
+
+Al sustituir \ref{caso_n_articulos_ecuacion_1} en \ref{caso_n_articulos_ecuacion_2} el modelo se puede reducir a un solo conjunto de \(n\) ecuaciones simultáneas
+\[
+Q_{di}(P_1,P_2,\dots,P_n)-Q_{s1}(P_1,P_2,\dots,P_n)=0
+\]
+
+Dado que \(E_i \equiv Q_{di}-Q_{si}\), donde \(E_i\) es necesariamente también una funcion de los \(n\) precios, el ultimo conjunto de ecuaciones se puede escribir como 
+\[
+E_i(P_1,P_2,\dots,P_n)=0
+\]
+Si en realidad existe una solución, al resolver de forma simultánea estas \(n\) ecuaciones se determinan los \(n\) precios de equilibrio \(P_i^\ast\). Luego, \(Q_i^\ast\) se puede deducir de las funciones de la oferta y demanda.
+
+
+\subsubsection{Solución de un sistema general de ecuaciones}
+
+Para un modelo con coeficientes numéricos, los valores de equilibrio de las variables son numéricas. Si un modelo se expresa en términos de constantes paramétricas, los valores de equilibrio van a estar dados con parámetros. Sin embargo, si las formas de funcion se dejan sin especificar en un modelo para generalizar, la manera de expresar los valores de solución será tambien por necesidad general.
+
+Si no definimos la función, por ejemplo \(Q_d = f(p)\), la solucion se expresa de forma simbólica, como 
+\[
+P_i^\ast=P_i^\ast(a_1,a_2,\dots,a_m)
+\]
+Esto significa que el precio de equilibrio \(P_i^\ast\) depende de \textit{todos los parámetros} del sistema. Aunque no aporte a la solucion, es útil para entender cómo un cambio en el entorno afecta al equilibrio.
+
+Si se poseen dos incógnitas y dos ecuaciones, el problema no necesariamente está resuelto. Para que un sistema tenga una solución única, se necesitan dos condiciones \textit{consistencia} y \textit{independencia funcional}.
+
+La \textit{consistencia}, busca que se eviten contradicciones. Es decir si una ecuación dice que \(x+y=8\) y la otra que \(x+y=9\), el sistema es inconsistente, ya que es imposible que ambas sean ciertas al mismo tiempo.
+
+En el caso de la \textit{independencia funcional} busca evitar redundancias. Es decir, si una ecuación \(2x+y = 12\) es simplemente la otra multiplicada por \(2\), \(4x+2y=24\), no se tienen dos piezas de información, se tiene solo una. Se tienen ``grados de libertad'', que genera infinitas soluciones posibles en lugar de una.
+
+Si por ultimo, tenemos dos incógnitas \(x,y\) pero tres ecuaciones, el sistema está sobre determinado. Esto significa que, no existe un punto que satisfaga a las tres al mismo tiempo. Esto se debe a que hay una \textit{dependencia funcional} entre ellas. Es decir, una de las ecuaciones es redundante porque nace de las otras dos. Por ejemplo, tenemos tres ecuaciones 
+\[
+(x+y=20), (2x+y=12) \textsl{ y } (y=28)
+\]
+tenemos que si restamos la primera a la segunda \((2x-x)-(x+y)=12-20\), por lo tanto \(x=-8\). Si ahora sustituimos \(x\) en la primera, nos queda que \(-8+y=20\), que es lo mismo que decir que \(y=28\). Por lo tanto hay una ecuación inecesaria.
+
+En economia, las ecuaciones representan comportamientos humanos. La demanda proviene del consumidor, la oferta de la empresa que busca maximizar beneficios. Como tanto los consumidores, como productores tienen motivaciones distintas, estos toman decisiones de forma independiente, de manera que sus funciones matemáticas van a ser independientes. 
+
+En economia hay consistencia, ya que cuando escribimos \(Q_d=Q_s\), estamos asumiendo que el mercado se ``limpia''. Esto, porque en la vida real, los precios se ajustan para que compradores y vendedores coincidan. Si el modelo es consistente, el punto de intersección existe.
+
+Aunque expresiones cómo \(P_i^*=P_i(a_1,a_2,\dots,a_m)\) parezca que no tiene contenido, es vital para el análisis estático comparativo. Por ejemplo si \(a_1\) es un impuesto, la formula nos permite analizar cómo cambiará el precio de equilibrio si el impuesto sube, incluso si no conocemos los numeros exactos.
+
+Para estar seguros de que existe una solución, se necesitan herramientas más potentes, como \textit{determinantes} para saber si las ecuaciones lineales son independientes y \textit{jacobianos} para hacer lo mismo en modelos complejos donde las curvas no son lineas rectas.
+
+\begin{ejercicio}
+    \begin{enumerate}
+        \item Desarrolle la solución de \(c_1P1+c_2P+2=-c_0\) y \(\gamma_1P_1+\gamma_2P_2=\gamma_0\), paso a paso, y de este modo compruebe los resultados de \(P_1^\ast=(c_2\gamma_0-c_0\gamma_2)/(c_1\gamma_2-c_2\gamma_1)\) y de \(P_2^\ast=(c_0\gamma_1-c_1\gamma_0)/(c_1\gamma_2-c_2\gamma_1)\).
+        \item Vuelva a escribir \(P_1^\ast=(c_2\gamma_0-c_0\gamma_2)/(c_1\gamma_2-c_2\gamma_1)\) y \(P_2^\ast=(c_0\gamma_1-c_1\gamma_0)/(c_1\gamma_2-c_2\gamma_1)\) en términos de los parámetros originales del modelo en 
+        \begin{equation}
+            \begin{aligned}
+                & Q_{d1}-Q_{s1}=0 \\
+                & Q_{d1}=a_0+a_1P_1+a_2P_2 \\ 
+                & Q_{s1}=b_0+b_1P_1+b_2P_2 \\
+                & Q_{d2}-Q_{s2}=0 \\
+                & Q_{d2}=\alpha_0+\alpha_1P_1+\alpha_2P_2 \\
+                & Q_{s2}=\beta_0+\beta_1P_1+\beta_2P_2
+            \end{aligned}
+        \end{equation}
+        \item Las funciones de la oferta y la demanda de un modelo de mercado de dos artículos son como sigue
+                \begin{equation}
+            \begin{aligned}
+                & Q_{d1}=18-3P_1+P_2 \qquad \qquad Q_{s1} = -2+4P_1 \\
+                & Q_{d2}=12+P_1-2P_2 \qquad \qquad Q_{s2} = -2+3P_2
+            \end{aligned}
+        \end{equation}
+        Determine \(P_i^\ast\) y \(Q_i^\ast\) donde \((i=1,2)\). Usar fracciones.
+    \end{enumerate}
+\end{ejercicio}

@@ -786,14 +786,96 @@ z=ax+by \qquad \text{o} \qquad z = a_0+a_1x+a_2x^2+b_1y+ b_2y^2
 Al igual que la función \(y=f(x)\) que mapea un \textit{dominio} hacia un punto en la \textit{imagen}, la función \(g\) hace lo mismo. Sin embargo, en este caso el dominio no es un conjunto de números, es un conjunto de \textit{pares ordenados} \(x,y\), ya que se puede determinar \(z\) cuando se especifica \(x,y\).
 La función g es un mapeo de un punto en un espacio bidimensional hacia un punto en un segmento de recta (es decir, un punto en un espacio unidimensional), por ejemplo del punto \(x_1, y_1\) hacia el punto \(z_1\) o de \(x_2, y_2\) hacia \(z_2\) como en la figura \ref{grafico_tidimensional_1}.
 
-% \begin{figure}[htbp] % Realizar figura tridimensional 2.9a página 47
-%     a
-% \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[>=Stealth, scale=1.1]
+        % Ejes y origen
+        \draw[->] (0,0) -- (5,0) node[below] {$x$};
+        \draw[->] (0,0) -- (0,5) node[left] {$y$};
+        \node[below left] at (0,0) {$O$};
+
+        % Eje vertical z a la derecha
+        \draw (7,0) -- (7,5) node[right] {$z$};
+
+        % Proyecciones y punto (x1, y1)
+        \draw[dashed] (1.5,0) -- (1.5,3) -- (0,3);
+        \fill (1.5,3) circle (1.5pt) node[right, xshift=2pt] {$(x_1, y_1)$};
+        \node[below] at (1.5,0) {$x_1$};
+        \node[left] at (0,3) {$y_1$};
+
+        % Proyecciones y punto (x2, y2)
+        \draw[dashed] (3,0) -- (3,2) -- (0,2);
+        \fill (3,2) circle (1.5pt) node[right, xshift=2pt] {$(x_2, y_2)$};
+        \node[below] at (3,0) {$x_2$};
+        \node[left] at (0,2) {$y_2$};
+
+        % Puntos en el eje z
+        \fill (7,3.5) circle (1.5pt) node[right] {$z_1$};
+        \fill (7,2.2) circle (1.5pt) node[right] {$z_2$};
+
+        % Flechas curvas de la función g
+        \draw[->, thick, color=blue] (1.5,3) to[out=40, in=160] node[above] {$g$} (7,3.5);
+        \draw[->, thick, color=blue] (3,2) to[out=30, in=170] node[above] {$g$} (7,2.2);
+
+    \end{tikzpicture}
+    \caption{Representación de la aplicación $g$ desde el plano $xy$ hacia el eje $z$.}
+    \label{grafico_tidimensional_1}
+\end{figure}
 
 Si se coloca al eje \(z\) de forma perpendicular vertical al plano \(xy\), como se hizo en la figura \ref{grafico_tridimensional_2}, se obtiene un espacio tridimensional en la cual se le da a la función \(g\) una grafica más aproximada.
 El dominio de esta función es algún subconjunto de los puntos en el plano \(xy\), y el valor de la función (valor \(z\)) para un punto en el dominio, se puede indicar mediante la altura de una recta vertical.
 La relación de las tres variables se resume por una terna ordenada \(x_1,y_1,z_1\), que es el punto específico en el espacio tridimensional.
 El lugar de esa terna ordenada es la que da forma a una superficie, que constituye la gráfica de la función \(g\).
+
+\begin{figure}[htbp]
+    \centering
+    \begin{tikzpicture}[
+        >=Stealth, 
+        scale=0.8,
+        x={(-0.8cm,-0.4cm)}, % Eje x: hacia la izquierda y abajo
+        y={(0.8cm,-0.4cm)},  % Eje y: hacia la derecha y abajo
+        z={(0cm,1.2cm)}      % Eje z: vertical hacia arriba
+    ]
+        % --- EJES ---
+        \draw[->] (0,0,0) -- (6,0,0) node[below left] {$x$};
+        \draw[->] (0,0,0) -- (0,7,0) node[below right] {$y$};
+        \draw[->] (0,0,0) -- (0,0,2.5) node[left] {$z$}; % Eje z más pequeño
+
+        % --- PUNTO 1 (x1, y1, z1) ---
+        % Proyecciones en el plano xy 
+        \draw[dashed] (2.5,0,0) -- (2.5,4,0) -- (0,4,0);
+        
+        % Línea de altura vertical z1 - Curva de color azul
+        \draw[dashed] (2.5,4,0) -- (2.5,4,2); % Conexión base-tope ajustada
+        \draw[ultra thick, color=blue] (2.5,4,0) -- (2.5,4,2); % Línea azul
+        
+        % Puntos
+        \fill (2.5,4,0) circle (1.5pt); 
+        \fill (2.5,4,2) circle (1.5pt); % node[above] {$(x_1, y_1, z_1)$}
+        
+        % Etiquetas en los ejes
+        \node[below left] at (1.8,0,0.4) {$x_1$};
+        \node[below right] at (0,4,0.4) {$y_1$};
+
+        % --- PUNTO 2 (x2, y2, z2) ---
+        \draw[dashed] (5,0,0) -- (5,2,0) -- (0,2,0);
+        
+        % Línea de altura vertical z2 - Curva de color azul
+        \draw[dashed] (5,2,0) -- (5,2,1.2); % Conexión base-tope ajustada
+        \draw[ultra thick, color=blue] (5,2,0) -- (5,2,1.6); % Línea azul
+        
+        % Puntos
+        \fill (5,2,0) circle (1.5pt);
+        \fill (5,2,1.6) circle (1.5pt); %node[above] {$(x_2, y_2, z_2)$}
+        
+        % Etiquetas en los ejes
+        \node[below left] at (4.6,0,0.4) {$x_2$};
+        \node[below right] at (0,2,0.4) {$y_2$};
+    \end{tikzpicture}
+    \caption{Gráfico tridimensional.}
+    \label{grafico_tridimensional_2}
+\end{figure}
+
 
 \begin{nota}
     En economía se utiliza frecuentemente este tipo de funciones tridimensionales. Por ejemplo en las funciones de producción. Donde la producción se determina mediantes cantidades de capital \(k\), y la mano de obra empleada \(L\). Entonces se puede escribir una función de producción como \(Q=Q(K,L)\).
@@ -811,7 +893,7 @@ es una función lineal, donde su caracterísitica es que cada variable es elevad
 Una función cuadrática, tiene que ver con primeras y segundas potencias de una o más variables independientes, pero la suma de los exponentes de las variables que aparecen en cualquier término simple no debe pasar de 2.
 
 \begin{nota}
-    En lugar de denotar las variables independientes mediante \(x,u,v,w, \dots\), se intercambiaron por \(x_{subíndice}\), es decir \(x_1,_x_2, \dots, x_n\).
+    En lugar de denotar las variables independientes mediante \(x,u,v,w, \dots\), se intercambiaron por \(x_{subindice}\), es decir \(x_1, x_2, \dots, x_n\).
     Este metodo, es una forma en econoía de contear más facil un mayor número de variables que forman parte de la función.
 \end{nota}
 
