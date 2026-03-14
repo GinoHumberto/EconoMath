@@ -2,7 +2,7 @@
 
 En los modelos anteriores, se trataba un mercado aislado, donde \(Q_d\) y \(Q_s\) son funciones del precio de un producto. En la realidad, ningún producto experimenta de tal solitaria existencia. Por lo tanto la función de demanda de un producto debe tomar en cuenta el efecto, no sólo de precio del producto, sino también el de los precios de productos sustitutos y complementarios (productos relacionados). Lo mismo ocurre para la función de oferta.
 
-Una vez que se consideran los precios de otros artículos, la estructura del modelo se debe apliar, para producir los valores de equilibrio de estos otros precios. Como resultado, las variables de precio y cantidad de múltiples productos deben entrar juntos de forma endógena en el modelo.
+Una vez que se consideran los precios de otros artículos, la estructura del modelo se debe ampliar, para producir los valores de equilibrio de estos otros precios. Como resultado, las variables de precio y cantidad de múltiples productos deben entrar juntos de forma endógena en el modelo.
 
 En un modelo de mercado aislado, la condición de equilibrio consiste en una ecuación, \(Q_d = Q_s\), o bien, \(E \equiv Q_d-Q_s=0 \), donde \(E\) representa la demanda excedente (y si esta es \(0\) equilibramos la función). Cuando se consideran varios artículos independientes, el equilibrio requiere la ausencia de la demanda excedente para cada artículo incluido en el modelo porque, si por lo menos un artículo se enfrenta a un exceso de demanda, el ajuste de precio de ese artículo afectará necesariamente a las cantidades demandadas y ofrecidas de los artículos relacionados. En consecuencia, la condición de equilibrio de un modelo de mercado de \(n\) artículos requerirá \(n\) ecuaciones, una para cada artículo, en la forma 
 \[
@@ -259,7 +259,7 @@ Para estar seguros de que existe una solución, se necesitan herramientas más p
 
 \begin{ejercicio}
     \begin{enumerate}
-        \item Desarrolle la solución de \(c_1P1+c_2P+2=-c_0\) y \(\gamma_1P_1+\gamma_2P_2=\gamma_0\), paso a paso, y de este modo compruebe los resultados de \(P_1^\ast=(c_2\gamma_0-c_0\gamma_2)/(c_1\gamma_2-c_2\gamma_1)\) y de \(P_2^\ast=(c_0\gamma_1-c_1\gamma_0)/(c_1\gamma_2-c_2\gamma_1)\).
+        \item Desarrolle la solución de \(c_1P1+c_2P_2=-c_0\) y \(\gamma_1P_1+\gamma_2P_2=-\gamma_0\), paso a paso, y de este modo compruebe los resultados de \(P_1^\ast=(c_2\gamma_0-c_0\gamma_2)/(c_1\gamma_2-c_2\gamma_1)\) y de \(P_2^\ast=(c_0\gamma_1-c_1\gamma_0)/(c_1\gamma_2-c_2\gamma_1)\).
         \item Vuelva a escribir \(P_1^\ast=(c_2\gamma_0-c_0\gamma_2)/(c_1\gamma_2-c_2\gamma_1)\) y \(P_2^\ast=(c_0\gamma_1-c_1\gamma_0)/(c_1\gamma_2-c_2\gamma_1)\) en términos de los parámetros originales del modelo en 
         \begin{equation}
             \begin{aligned}
@@ -272,7 +272,7 @@ Para estar seguros de que existe una solución, se necesitan herramientas más p
             \end{aligned}
         \end{equation}
         \item Las funciones de la oferta y la demanda de un modelo de mercado de dos artículos son como sigue
-                \begin{equation}
+            \begin{equation}
             \begin{aligned}
                 & Q_{d1}=18-3P_1+P_2 \qquad \qquad Q_{s1} = -2+4P_1 \\
                 & Q_{d2}=12+P_1-2P_2 \qquad \qquad Q_{s2} = -2+3P_2
@@ -280,4 +280,27 @@ Para estar seguros de que existe una solución, se necesitan herramientas más p
         \end{equation}
         Determine \(P_i^\ast\) y \(Q_i^\ast\) donde \((i=1,2)\). Usar fracciones.
     \end{enumerate}
+    \emph{Respuestas}
+    \begin{enumerate}
+        \item Desarrollado en el capitulo, siga el desarrollo.
+        \item Debemos remplazar \(c_n\) por su conjunto de números, lo que nos quedaria que 
+        \begin{equation}
+        \begin{aligned}
+            P_1^* &= \frac{(a_2 - b_2)(\alpha_0 - \beta_0) - (a_0 - b_0)(\alpha_2 - \beta_2)}{(a_1 - b_1)(\alpha_2 - \beta_2) - (a_2 - b_2)(\alpha_1 - \beta_1)} \\
+            P_2^* &= \frac{(a_0 - b_0)(\alpha_1 - \beta_1) - (a_1 - b_1)(\alpha_0 - \beta_0)}{(a_1 - b_1)(\alpha_2 - \beta_2) - (a_2 - b_2)(\alpha_1 - \beta_1)}
+        \end{aligned}
+        \end{equation}
+        \item Solución
+        \begin{equation}
+            \begin{aligned}
+                P_1^* &= \frac{114}{34} = \frac{57}{17} \qquad \quad &&P_2^* = \frac{118}{34}=\frac{59}{17} \\
+                Q_1^* &= \frac{194}{17}  \qquad \quad &&Q_2^* = \frac{143}{17}
+            \end{aligned}
+        \end{equation}
+    \end{enumerate}
 \end{ejercicio}
+
+
+
+
+

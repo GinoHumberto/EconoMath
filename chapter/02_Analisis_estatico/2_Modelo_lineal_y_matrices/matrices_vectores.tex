@@ -1,0 +1,195 @@
+\subsection{Matrices y vectores}
+
+En un modelo de mercado de dos articulos 
+$$
+\begin{aligned}
+& Q_{d1}-Q_{s1}=0 \\
+& Q_{d1}=a_0+a_1P_1+a_2P_2 \\ 
+& Q_{s1}=b_0+b_1P_1+b_2P_2 \\
+& Q_{d2}-Q_{s2}=0 \\
+& Q_{d2}=\alpha_0+\alpha_1P_1+\alpha_2P_2 \\
+& Q_{s2}=\beta_0+\beta_1P_1+\beta_2P_2
+\end{aligned}
+$$
+se puede escribir, luego de eliminar las variables de cantidad, como un sistema de dos ecuaciones lineales (visto anteriormente)
+$$
+\begin{aligned}
+&c_1P_1+c_2P_2=-c_0 \\ 
+&\gamma_1P_1+\gamma_2P_2=-\gamma_0
+\end{aligned}
+$$
+Donde los parámetros \(c_0\) y \(\gamma_0\) aparecen a la derecha del signo igual. En general, un sistema de \(m\) ecuaciones lineales en \(n\) variables \(x_1,x_2,\dots,x_n\) se puede disponer en este tipo de formato
+$$
+\begin{aligned}
+& a_{11}x_1+a_{12}x_2+\dots+a_{1n}x_n = d_1\\ 
+& a_{21}x_1+a_{22}x_2+\dots+a_{2n}x_n = d_2 \\
+& \dots \\
+& a_{m1}x_1+a_{m2}x_2+\dots+a_{mn}x_n = d_m
+\end{aligned}
+$$
+La variable \(x_1\) aparece dentro de la columna del extremo izquierdo y, en general, la variable \(x_n\) o \(x_j\) aparece sólo en la j-ésima columna, en el lado izquierdo del símbolo igual. 
+
+El simbolo de parámetro con doble subíndice \((a_{mn})\) o \(a_{ij}\) representa el coeficiente que aparece en la i-ésima ecuación, que multiplica a la j-ésima variable. Por ejemplo, \(a_{21}\) es el coeficiente en la segunda ecuaciónm que multiplica a la variable \(x_1\). 
+
+El parámetro \(d_m\) o \(d_i\) no está unido a ninguna variable, representa el término constante de la i-ésima ecuación. \(d_i\) es el término constante en la primera ecuación. 
+
+Los subíndices se adaptan a los lugares especificos de las variables y parámetros. La forma de organización entonces
+
+$$\begin{array}{cccc|c}
+\text{Columna } x_1 & \text{Columna } x_2 & \dots & \text{Columna } x_n & \text{Resultados} \\ \hline
+a_{11}x_1 & + a_{12}x_2 & + \dots & + a_{1n}x_n & = d_1 \\
+a_{21}x_1 & + a_{22}x_2 & + \dots & + a_{2n}x_n & = d_2 \\
+a_{31}x_1 & + a_{32}x_2 & + \dots & + a_{3n}x_n & = d_3 \\
+\end{array}$$
+Donde \(a\) toma valores de \(ij\) donde \(i\) es la fila y \(j\) la columna, es un sistema de organización de \(a_{ij}\).
+
+
+
+\subsubsection{Matrices como arreglos}
+
+Hay tres componentes en el sistema de ecuaciones, el primero es el conjunto de coeficientes \(a_{ij}\), el segundo el conjunto de variables \(x_1,x_2,\dots,x_n\) y el último es el conjunto de términos constantes \(d_1, d_2, \dots, d_m\).Si se arreglan los tres conjuntos como configuraciones rectangulares y se etiquetan como \(A,x\) y \(d\) entonces se obtiene
+\[
+A = \begin{bmatrix}
+a_{11} & a_{12} & \cdots & a_{1n} \\
+a_{21} & a_{22} & \cdots & a_{2n} \\
+\cdots  & \cdots  & \ddots \\
+a_{m1} & a_{m2} & \cdots & a_{mn}
+\end{bmatrix}
+\quad
+x = \begin{bmatrix}
+x_1 \\ 
+x_2 \\
+\vdots \\
+x_n
+\end{bmatrix}
+\quad
+d = \begin{bmatrix}
+d_1 \\
+d_2 \\
+\vdots \\ 
+d_m
+\end{bmatrix}
+\]
+Por lo tanto, dado el sistema de ecuaciones lineales 
+$$
+\begin{aligned}
+    & 6x_1 + 3x_2 + x_3 = 22
+    & x_1 + 4x_2 - 2x_3 = 12
+    & 4x_1 - x_2 + 5x_3 = 10
+\end{aligned}
+$$
+Se puede ordenar en una matriz como 
+\[
+A = \begin{bmatrix}
+6 & 3 & 1 \\
+1 & 4 & -2 \\
+4 & -1 & 5
+\end{bmatrix}
+\quad
+x = \begin{bmatrix}
+x_1 \\ 
+x_2 \\
+x_3
+\end{bmatrix}
+\quad
+d = \begin{bmatrix}
+22 \\
+12 \\
+10
+\end{bmatrix}
+\]
+\textit{Definimos matriz} como un \textit{arreglo rectangular} de números, parámetros o variables. Los miembros del arreglos son los \textit{elementos} de la matriz, estos normalmente se encierran entre corchetes, o a veces entre paréntesis o con lineas verticales dobles.
+
+En las matrices, los coeficientes, variables, parametros del sistema de ecuaciones no se separan por comas, sólo por espacios en blanco. Como una forma de abreviación el arreglo en la matriz \(A\) se puede escribir de forma más simple como 
+\[
+A = [a_{ij}] \quad \binom{i = 1, 2, \dots, m}{j = 1, 2, \dots, n} 
+\]
+En vista de que la ubicaci ón de cada elemento de la matriz se fija sin ambigüedad mediante el subíndice, toda matriz es un conjunto ordenado.
+
+
+\subsubsection{Vectores como matrices especiales}
+
+El número de renglones y el número de columnas en una matriz juntos definen la \textit{dimensión} de la matriz. Una matriz contiene \(m\) filas y \(n\) columnas, se dice que la dimensión de la matriz es \(m \times n\) o \(m\) por \(n\). El número de fila de una matriz siempre precede al número de columnas; esto concuerda con la forma en la que están ordenados los dos subíndices \(ij\) en \(a_{ij}\).
+
+Cuando en una matriz \(m = n\), la matriz se llama \textit{matriz cuadrada} (como la vista anteriormente).
+
+Algunas matrices pueden contener una sóla columna como \(x\) y \(d\). Esta clase de matriz recibe el nombre especial de \textit{vectores columna}. La dimensión de \(x\) es \(n \times 1\) y la de \(d\) es \(m \times 1\). Tanto \(x\) como \(d\) son de \(3 \times 1\). En el caso que se dispongan variables \(x_j\) en arreglo horizontal, resultaria una matriz de \(1 \times n\) que se llama \textit{vector renglón}. Un vector renglón se distingue de un vector columna por el uso de un símbolo, que es el apóstrofo.
+\[
+x' = \begin{bmatrix}
+    & x_1 & x_2 & \dots & x_n
+\end{bmatrix}
+\]
+Es posible observar que el vector (fila o columna) es sólo una \(n\)-tupla ordenada y, como tal, a veces se puede interpretar como un punto en un espacio de dimensión \(n\). La matiz \(A\) de \(m \times n\) se intepreta como un conjunto ordenado de \(m\) vectores filas o como un conjunto ordenado de \(n\) vectores columnas.
+
+Las matrices posibilitan expresar un sistema de ecuaciones en una forma mas compactas. Un sistema general de ecuaciones se puede escribir como \(Ax = d\).
+
+Sin embargo la ecuación \(Ax = d\) nos lleva a preguntarnos ¿Cómo se multiplican dos matrices \(A\) y \(x\)?¿Qué denota la igualdad de \(Ax=d\)? Como las matrices implican bloques completos de números, las operaciones algebraicas familiares definidas para números simples no son directamente aplicables, por lo tanto necesitamos un nuevo conjunto de reglas.
+
+\begin{ejercicio}
+    \begin{enumerate}
+        \item Reescriba el modelo de mercado 
+        $$
+        \begin{aligned}
+            Q_d &=Q_s \\
+            Q_d &= a - bP \\
+            Q_s &= -c + dP
+        \end{aligned}
+        $$
+        en el formato 
+        $$
+        \begin{aligned}
+        & a_{11}x_1+a_{12}x_2+\dots+a_{1n}x_n = d_1\\ 
+        & a_{21}x_1+a_{22}x_2+\dots+a_{2n}x_n = d_2 \\
+        & \dots \\
+        & a_{m1}x_1+a_{m2}x_2+\dots+a_{mn}x_n = d_m
+        \end{aligned}
+        $$
+        y muestre que, si se disponen las tres variables en el orden \(Q_d\), \(Q_s\) y \(P\), la matriz de coeficientes será
+        $$
+        \begin{bmatrix}
+            1 & -1 & 0 \\
+            1 & 0 & b \\
+            0 & 1 & -d
+        \end{bmatrix}
+        $$
+        ¿Cómo se escribiría el vector de constantes?
+        \item Rescriba el modelo de mercado 
+        $$
+        \begin{aligned}
+        & Q_{d1}-Q_{s1}=0 \\
+        & Q_{d1}=a_0+a_1P_1+a_2P_2 \\ 
+        & Q_{s1}=b_0+b_1P_1+b_2P_2 \\
+        & Q_{d2}-Q_{s2}=0 \\
+        & Q_{d2}=\alpha_0+\alpha_1P_1+\alpha_2P_2 \\
+        & Q_{s2}=\beta_0+\beta_1P_1+\beta_2P_2
+        \end{aligned}
+        $$
+        en el formato de matriz con las variables dispuestas en el siguiente orden: \(Q_{d1}, Q_{s1}, Q_{d2}, Q_{s2}, P_1, P_2\). Escriba la matriz de coeficientes, el vector de variables y el vector de constantes.
+        \item ¿Se puede reescribir el modelo de mercado 
+        $$
+        \begin{aligned}
+        Q_d &= Q_s \\
+        Q_d &= 4-P^2 \\
+        Q_s &= 4P-1
+        \end{aligned}
+        $$
+        en formato de matriz?¿Por qué>
+        \item Reescriba el modelo de ingreso nacional 
+        $$
+        \begin{aligned}
+        Y &= C + I_0 + G_0 \\
+        C &= a + bY
+        \end{aligned}
+        $$
+        en formato de matriz, con \(Y\) como la primera variable. Escriba la matriz de coeficientes y el vector de constantes.
+        \item Reescriba el modelo de ingreso nacional, en el cual 
+        $$
+        \begin{aligned}
+            Y &= C+I_0+G_0 \\
+            C &=a+b(Y-T) \qquad &&T\text{ es impuestos} \\
+            T &= d+tY \qquad &&t\text{ tasa de impuestos sobre la renta}
+        \end{aligned}
+        $$
+        con las variables en el orden \(Y, T\) y \(C\). \textit{Sugerencia}: Tenga cuidado con la expresión multiplicativa \(b(Y-T)\) en la función de consumo.
+    \end{enumerate}
+\end{ejercicio}

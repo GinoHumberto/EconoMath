@@ -294,7 +294,7 @@ Estas no forman parte de la hipótesis del teorema I. Aun cuando se multiplique 
 
 Dada la ecuación polinomial con coeficientes enteros 
 \[
-a_n^n + a_{n-1}x^{n-1}+\dots+a_1x+a_0 = 0
+a_nx^n + a_{n-1}x^{n-1}+\dots+a_1x+a_0 = 0
 \]
 si existe una raíz racional \(r/s\), donde \(r\) y \(s\) son enteros sin un divisor en común diferente de la unidad, entonces \(r\) es un divisor de \(a_0\) y \(s\) un divisor de \(a_n\).
 
@@ -324,18 +324,17 @@ Pero si \(x=1\) es una raíz de alguna ecuación polinomial. En ese caso puesto 
 
 Dada la ecuación polinomial 
 \[
-a_n^n + a_{n-1}x^{n-1}+\dots+a_1x+a_0 = 0
+a_nx^n + a_{n-1}x^{n-1}+\dots+a_1x+a_0 = 0
 \]
 Si la suma de los coeficientes \(a_n,a_{n-1},\dots,a_0\) es cero, entonces \(x=1\) es una raíz de la ecuación.
 
 
 \begin{ejercicio}
     \begin{enumerate}
-        \item Determine en forma gráfico los ceros de las siguientes funciones
+        \item Determine los ceros de las siguientes funciones
         \[
         (a)\quad f(x)=x^2-8x+15 \qquad \qquad (b) \quad g(x) = 2x^2-4x-16
         \]
-        \item Resuelva el problema 1 mediante la fórmula cuadrática.
         \item \((a)\) Encuentre una ecuación cúbica con raíces \(6,-1\) y \(3\).
         
         \((b)\) Obtenga una ecuación cuártica con raíces \(1,2,3\) y \(5\).
@@ -358,10 +357,21 @@ Si la suma de los coeficientes \(a_n,a_{n-1},\dots,a_0\) es cero, entonces \(x=1
                 \begin{aligned}
                     (a)\quad & Q_d = Q_s  \qquad \qquad (b) \quad &&Q_d = Q_s \\
                     & Q_d=3-P^2    &&Q_d = 8-P^2 \\
-                    & Q_s=6P-4     &&Q_s = {^2-2}
+                    & Q_s=6P-4     &&Q_s = P^2-2
                 \end{aligned}
             \end{equation}         
         \item La condición de equilibrio de mercado, \(Q_d = Q_s\), suele expresarse en una forma alternativa equivalente, \(Q_d - Q_s = 0\), que tiene la interpretación económica ``la demanda excedente es cero''. ¿Representa la ecuación \(P^2+4P -5 = 0\) esta última versión de la condición de equilibrio? Si no, provea una interpretación apropiada para \(P^2+4P -5 = 0\)
+    \end{enumerate}
+    \emph{Respuestas}
+    \begin{enumerate}
+        \item \((a)\) \(x_1^*=5\) \(x_2^*=3\), \((b)\) \(x_1^*=4\), \(x_2^*=-2\)
+        \item \((a)\) \(x^3-8x^2+9x+18\), \((b)\) \(x^4-11x^3+41x^2-61x+30\). El procedimiento es como el ejemplo \ref{ejemplo_factorización} pero a la inversa.
+        \item \((a)\) Despues de aplicar el teorema I y resolver, encontramos que la raíz es \(1\). \((b)\) Es un numero irracional, por lo tanto no se encuentra una raiz racional. \((c)\) Aplicando el teorema II y resolviendo, nos da que la raíz es \(1\).
+        \item \((a)\) Por teorema I, la raíz es \(3\) y \(2\). \((b)\) El número no es racional, no se puede resolver con teoremas. \((c)\) Por teorema I la raíz se encuentra en \(-1\). \((d)\) Las raices son irracionales.
+        \item \((a)\) \(P^*=1\) y \(Q^*=2\) 
+        
+        \((b)\) \(P^*=\sqrt{5}\) y \(Q^*=3\)
+        \item Cuando nos referimos a que la demanda excedente es cero, decimos que no se ofrecen productos de más, ni se demandan más productos. Es el punto donde ambas partes se benefician. La ecuación \(P2+4P-5=0\) representa la función de exceso de demanda \(E\) para un mercado específico. El valor de P que sea la raíz de esta ecuación será el precio que garantiza que el exceso de demanda sea nulo
     \end{enumerate}
 \end{ejercicio}
 

@@ -1,2 +1,169 @@
 \subsection{Equilibrio en el análisis de ingreso nacional}
 
+El estudio de análisis estático tiene aplicaciones en áreas de la economía, como por ejemplo, el del modelo de ingreso nacional keynesiano más simple, donde
+\begin{equation}
+\label{ecuacion_equilibrio_ingreso_nacional_simple_1}
+\begin{aligned}
+Y &= C + I_0 + G_0 \\
+C &= a + bY
+\end{aligned}
+\end{equation}
+En el cual \(a > 0, 0<b<1\). En esta ecuación \(Y\) y \(C\) representan las variables endógenas de ingreso nacional y gasto de consumo (planificado), respectivamente, \(I_0\) representa la inversion y \(G_0\) los gastos de gobierno determinados de manera exógena. 
+
+La primera ecuación es una condición de equilibrio \textit{(ingreso nacional = gasto total planeado)}, mientras que la segunda función es de comportamiento. La segunda función, de consumo, cosnta de dos parametros de consumo \(a\) y \(b\), los cuales representan el gasto de consumo autónomo y la propensión marginal al consumo.
+
+Estas dos ecuaciones, con variables endógenas, no son dependientes ni inconsistentes. Se podrían hallar valores de equilibrio de ingreso y gasto de consumo \(Y^\ast\) y \(C^\ast\) en términos de los parámetros \(a\) y \(b\) y las variables exógenas \(I_0\) y \(G_0\).
+
+Al sustituir la segunda ecuación en la primera reduce la ecuación \ref{ecuacion_equilibrio_ingreso_nacional_simple_1} a una sola ecuación en la variable \(Y\)
+$$
+\begin{aligned}
+Y &= a + bY + I_0 + G_0  \qquad \text{O bien}\\
+(1-b)Y &= a + I_0 + G_0 \qquad (\text{Reuniendo los terminos relacionados con } Y)
+\end{aligned}
+$$
+Para hallar el valor de solución de \(Y\) (ingreso nacional de equilibrio), sólo se debe dividir entre \((1-b)\)
+\[
+Y^\ast=\frac{a + I_0 + G_0}{1-b}
+\]
+El valor de solución se expresa por completo en término de parámetros y variables exógenas, los cuales son los datos del modelo. Si colocamos el valor de solución \(Y^*\) en \(C = a + bY\), se produce entonces el nivel de equilibrio de gasto de consumo, donde 
+$$
+\begin{aligned}
+C^\ast &= a + \frac{b(a + I_0 + G_0)}{1-b}\\
+C^\ast &= \frac{a(1-b)+b(a+I_0+G_0)}{1-b}=\frac{a+b(I_0+G_0)}{1-b}
+\end{aligned}
+$$
+Como \(Y^\ast\) y \(C^\ast\) tienen la expresión \((1-b)\) en el denominador, es necesario restringir que \(b \neq 1\) para evitar la división entre cero. Esto se realiza bajo el supuesto que \(b\), la propensión marginal al consumo, es una fracción positiva. Para que \(Y^\ast\) y \(C^\ast\) sean positivos, los numeradores de sus ecuaciones tambien deben serlo. Los gasots exógenos como \(I_0\) y \(G_0\) son positivos, al igual que el parámetro \(a\).
+
+Este modelo es de extrema simplicidad y crudeza, pero se pueden construir otros modelos de determinación de ingreso nacional con distintos grados de complejidad.
+
+\begin{ejercicio}
+    \begin{enumerate}
+        \item Dado el siguiente modelo 
+        $$
+        \begin{aligned}
+            Y &= C+I_0+G_0 \\
+            C &=a+b(Y-T) \qquad &&T\text{ es impuestos} \\
+            T &= d+tY \qquad &&t\text{ tasa de impuestos sobre la renta}
+        \end{aligned}
+        $$
+        \((a)\) ¿Cuántas variables endógenas hay?
+        \((b)\) Determine \(Y^\ast,T^\ast\) y \(C^\ast\).
+        \item Sea el modelo de ingreso nacional 
+        $$
+        \begin{aligned}
+            Y &= C+I_0+G_0 \\
+            C &=a+b(Y-T_0)  \\
+            G &= gY
+        \end{aligned}
+        $$
+        \((a)\) Identifique las variables endógenas.
+        \((b)\) Dé el significado económico del parámetro \(g\).
+        \((c)\) Determine el ingreso nacional de equilibrio.
+        \((d)\) ¿Qué restricción se requiere en los parámetros para que exista una solución?
+        \item Determine \(Y^*\) y \(C^*\) a partir de lo siguiente
+        $$
+        \begin{aligned}
+            Y &= C+I_0+G_0 \\
+            C &=35+6Y^{1/2}  \\
+            I_0 &= 16 \\
+            G_0 & = 14
+        \end{aligned}
+        $$
+    \end{enumerate}
+    \emph{Respuestas}
+    \begin{enumerate}
+        \item Hay 3 variables endógenas \(Y,C\) y \(T\)
+        $$
+        \begin{aligned}
+            Y^\ast &= \frac{a-bd+I_0+G_0}{1-b+bt} \\
+            C^\ast &= \frac{a-bd+b(1-t)(I_0G_0)}{1-b+bt}  \\
+            T^\ast &= \frac{d-db+t(a+I_0+G_0)}{1-b+bt}
+        \end{aligned}
+        $$
+        Para entender que es cada variable ver cuadro \ref{Significado_Variables_ingreso_nacional}
+        \item 
+    \end{enumerate}
+\end{ejercicio}
+        
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|l|l|}
+\hline
+\textbf{Símbolo} & \textbf{Nombre} & \textbf{Significado Económico} \\ \hline
+$Y$ & Ingreso Nacional (PIB) & Valor total de la producción final. \\ \hline
+$C$ & Consumo & Gasto total de los hogares. \\ \hline
+$T$ & Impuestos Totales & Recaudación fiscal del Estado. \\ \hline
+$a$ & Consumo Autónomo & Consumo que no depende del ingreso. \\ \hline
+$b$ & PMC & Propensión Marginal a Consumir ($0 < b < 1$). \\ \hline
+$d$ & Impuestos Autónomos & Impuestos fijos, independientes del ingreso. \\ \hline
+$t$ & Tasa Impositiva & Impuesto proporcional sobre la renta. \\ \hline
+$I_0$ & Inversión Exógena & Inversión planeada por las empresas. \\ \hline
+$G_0$ & Gasto Público & Gasto realizado por el gobierno. \\ \hline
+\end{tabular}
+\caption{Tabla de variables}
+\label{Significado_Variables_ingreso_nacional}
+\end{table}
+
+% ¡Claro que sí! Vamos a rematar el ejercicio. Una vez que ya tenemos el "motor" de la economía, que es $Y^*$, encontrar $T^*$ y $C^*$ es como seguir una receta de cocina: solo hay que sustituir y simplificar.
+% 
+% ### 1. Determinando $T^*$ (Impuestos de equilibrio)
+% 
+% La ecuación original de impuestos es $T = d + tY$. Sustituimos la $Y$ por la "mega fracción" de $Y^*$ que encontramos:
+% 
+% $$T^* = d + t \left( \frac{a - bd + I_0 + G_0}{1 - b + bt} \right)$$
+% 
+% Para dejarlo en una sola fracción (como le gusta al Alpha Chiang), multiplicamos la $d$ por $\frac{1 - b + bt}{1 - b + bt}$ para igualar denominadores:
+% 
+% $$T^* = \frac{d(1 - b + bt) + t(a - bd + I_0 + G_0)}{1 - b + bt}$$
+% 
+% Al distribuir y romper paréntesis en el numerador:
+% 
+% 
+% $$T^* = \frac{d - bd + bdt + ta - bdt + tI_0 + tG_0}{1 - b + bt}$$
+% 
+% Fíjate que **$+bdt$** y **$-bdt$** se eliminan. Nos queda:
+% 
+% 
+% $$T^* = \frac{d - bd + ta + t(I_0 + G_0)}{1 - b + bt}$$
+% 
+% ---
+% 
+% ### 2. Determinando $C^*$ (Consumo de equilibrio)
+% 
+% Aquí tienes un truco de "programador" para ahorrarte álgebra: en lugar de usar la fórmula larga de consumo, usa la condición de equilibrio despejada: $C = Y - I_0 - G_0$.
+% 
+% $$C^* = \left( \frac{a - bd + I_0 + G_0}{1 - b + bt} \right) - (I_0 + G_0)$$
+% 
+% Hacemos lo mismo: multiplicamos $(I_0 + G_0)$ por el denominador para juntar las fracciones:
+% 
+% $$C^* = \frac{(a - bd + I_0 + G_0) - (I_0 + G_0)(1 - b + bt)}{1 - b + bt}$$
+% 
+% Al distribuir el $(I_0 + G_0)$ y simplificar términos, llegarás a la forma final:
+% 
+% 
+% $$C^* = \frac{a - bd + b(I_0 + G_0) - bt(I_0 + G_0)}{1 - b + bt}$$
+% 
+% 
+% Que también se puede escribir agrupando:
+% 
+% 
+% $$C^* = \frac{a - bd + b(1 - t)(I_0 + G_0)}{1 - b + bt}$$
+% 
+% ---
+% 
+% ### ¿Qué nos dicen estos resultados?
+% 
+% * **$T^*$:** Nos dice cuánto va a recaudar el gobierno. Fíjate que si el ingreso nacional ($Y^*$) sube, la recaudación sube proporcionalmente a la tasa $t$.
+% * **$C^*$:** Es el consumo real de las familias después de que el gobierno les quitó su parte. Por eso aparece el término $(1-t)$, que representa el ingreso disponible.
+% 
+% ### Resumen para tu cuaderno de Bichopolis:
+% 
+% En términos de lógica, este modelo es como una **base de datos relacional**:
+% 
+% 1. **$Y$** depende de **$C$**.
+% 2. **$C$** depende de **$T$**.
+% 3. **$T$** depende de **$Y$**.
+% 
+% ¡Es un círculo! Por eso se llaman **ecuaciones simultáneas**. No puedes conocer una sin conocer las otras, y el álgebra es la herramienta que "rompe" ese círculo para darte un valor fijo.
+% 
+% ¿Cómo te sientes con estos despejes? Si ya los tienes claros, ¡estás oficialmente listo para el mundo de las **Matrices**, donde resolveremos esto mismo pero de una forma mucho más elegante! ¿Quieres que te de una introducción rápida a cómo se ve este sistema en una matriz?
