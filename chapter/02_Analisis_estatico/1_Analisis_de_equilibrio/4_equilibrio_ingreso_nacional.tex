@@ -60,7 +60,7 @@ Este modelo es de extrema simplicidad y crudeza, pero se pueden construir otros 
         \((b)\) Dé el significado económico del parámetro \(g\).
         \((c)\) Determine el ingreso nacional de equilibrio.
         \((d)\) ¿Qué restricción se requiere en los parámetros para que exista una solución?
-        \item Determine \(Y^*\) y \(C^*\) a partir de lo siguiente
+        \item Determine \(Y^\ast\) y \(C^\ast\) a partir de lo siguiente
         $$
         \begin{aligned}
             Y &= C+I_0+G_0 \\
@@ -81,7 +81,33 @@ Este modelo es de extrema simplicidad y crudeza, pero se pueden construir otros 
         \end{aligned}
         $$
         Para entender que es cada variable ver cuadro \ref{Significado_Variables_ingreso_nacional}
-        \item 
+        \item \((a)\) Las variables endógenas en este modelo son el ingreso nacional \((Y)\), el consumo \((c)\) y el gasto público \((G)\).\\
+        \((b)\) \(g\) representa la propension marginal al gasto público. Indica cuanto aumenta el gasto del gobierno por cada unidad de ingreso nacional.\\
+        \((c)\) \[
+        Y^\ast=\frac{a-bT_0+I_0}{1-b-g}
+        \]
+        \((d)\) \(1-b-g > 0\) y \(b+g < 1\) Ya que no se puede dividir por \(0\) y si el denominador es negativo nos daria un resultado negativo.
+        \item El procedimiento para el resultado de\(Y^ast\)
+        $$
+        \begin{aligned}
+            & Y = C+16+14 \\
+            & Y = 35+6Y^{1/2}+30 \\
+            & Y = 6Y^{1/2}+65 \\
+            & Y-65 = 6Y^{1/2} \\
+            & (Y-65)^2=(6Y^{1/2})^2 \\ 
+            & Y^2 - 2\times 65 \times Y + 65^2 = 36Y \\
+            & Y^2 -130Y+65^2=36 Y \\
+            & Y^2 -166Y + 65^2 = 0 \\
+            & Y_1 = 83-6\sqrt{74} \text{(No verifica, es negativo)} \\
+            & Y_2^\ast = 83+6\sqrt{74}\approx 134,6
+        \end{aligned}
+        $$
+        Para obtener \(C\) remplazo \(Y\)
+        $$
+        \begin{aligned}
+            & C = 35+6\sqrt{Y_2^\ast} 
+        \end{aligned}
+        $$
     \end{enumerate}
 \end{ejercicio}
         
@@ -99,71 +125,8 @@ $d$ & Impuestos Autónomos & Impuestos fijos, independientes del ingreso. \\ \hl
 $t$ & Tasa Impositiva & Impuesto proporcional sobre la renta. \\ \hline
 $I_0$ & Inversión Exógena & Inversión planeada por las empresas. \\ \hline
 $G_0$ & Gasto Público & Gasto realizado por el gobierno. \\ \hline
+$g$ & Propersión al gasto & Incremento del gasto por cada unidad de \(Y\) \\ \hline
 \end{tabular}
 \caption{Tabla de variables}
 \label{Significado_Variables_ingreso_nacional}
 \end{table}
-
-% ¡Claro que sí! Vamos a rematar el ejercicio. Una vez que ya tenemos el "motor" de la economía, que es $Y^*$, encontrar $T^*$ y $C^*$ es como seguir una receta de cocina: solo hay que sustituir y simplificar.
-% 
-% ### 1. Determinando $T^*$ (Impuestos de equilibrio)
-% 
-% La ecuación original de impuestos es $T = d + tY$. Sustituimos la $Y$ por la "mega fracción" de $Y^*$ que encontramos:
-% 
-% $$T^* = d + t \left( \frac{a - bd + I_0 + G_0}{1 - b + bt} \right)$$
-% 
-% Para dejarlo en una sola fracción (como le gusta al Alpha Chiang), multiplicamos la $d$ por $\frac{1 - b + bt}{1 - b + bt}$ para igualar denominadores:
-% 
-% $$T^* = \frac{d(1 - b + bt) + t(a - bd + I_0 + G_0)}{1 - b + bt}$$
-% 
-% Al distribuir y romper paréntesis en el numerador:
-% 
-% 
-% $$T^* = \frac{d - bd + bdt + ta - bdt + tI_0 + tG_0}{1 - b + bt}$$
-% 
-% Fíjate que **$+bdt$** y **$-bdt$** se eliminan. Nos queda:
-% 
-% 
-% $$T^* = \frac{d - bd + ta + t(I_0 + G_0)}{1 - b + bt}$$
-% 
-% ---
-% 
-% ### 2. Determinando $C^*$ (Consumo de equilibrio)
-% 
-% Aquí tienes un truco de "programador" para ahorrarte álgebra: en lugar de usar la fórmula larga de consumo, usa la condición de equilibrio despejada: $C = Y - I_0 - G_0$.
-% 
-% $$C^* = \left( \frac{a - bd + I_0 + G_0}{1 - b + bt} \right) - (I_0 + G_0)$$
-% 
-% Hacemos lo mismo: multiplicamos $(I_0 + G_0)$ por el denominador para juntar las fracciones:
-% 
-% $$C^* = \frac{(a - bd + I_0 + G_0) - (I_0 + G_0)(1 - b + bt)}{1 - b + bt}$$
-% 
-% Al distribuir el $(I_0 + G_0)$ y simplificar términos, llegarás a la forma final:
-% 
-% 
-% $$C^* = \frac{a - bd + b(I_0 + G_0) - bt(I_0 + G_0)}{1 - b + bt}$$
-% 
-% 
-% Que también se puede escribir agrupando:
-% 
-% 
-% $$C^* = \frac{a - bd + b(1 - t)(I_0 + G_0)}{1 - b + bt}$$
-% 
-% ---
-% 
-% ### ¿Qué nos dicen estos resultados?
-% 
-% * **$T^*$:** Nos dice cuánto va a recaudar el gobierno. Fíjate que si el ingreso nacional ($Y^*$) sube, la recaudación sube proporcionalmente a la tasa $t$.
-% * **$C^*$:** Es el consumo real de las familias después de que el gobierno les quitó su parte. Por eso aparece el término $(1-t)$, que representa el ingreso disponible.
-% 
-% ### Resumen para tu cuaderno de Bichopolis:
-% 
-% En términos de lógica, este modelo es como una **base de datos relacional**:
-% 
-% 1. **$Y$** depende de **$C$**.
-% 2. **$C$** depende de **$T$**.
-% 3. **$T$** depende de **$Y$**.
-% 
-% ¡Es un círculo! Por eso se llaman **ecuaciones simultáneas**. No puedes conocer una sin conocer las otras, y el álgebra es la herramienta que "rompe" ese círculo para darte un valor fijo.
-% 
-% ¿Cómo te sientes con estos despejes? Si ya los tienes claros, ¡estás oficialmente listo para el mundo de las **Matrices**, donde resolveremos esto mismo pero de una forma mucho más elegante! ¿Quieres que te de una introducción rápida a cómo se ve este sistema en una matriz?

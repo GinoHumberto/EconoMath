@@ -29,7 +29,7 @@ $$
 $$
 La variable \(x_1\) aparece dentro de la columna del extremo izquierdo y, en general, la variable \(x_n\) o \(x_j\) aparece sólo en la j-ésima columna, en el lado izquierdo del símbolo igual. 
 
-El simbolo de parámetro con doble subíndice \((a_{mn})\) o \(a_{ij}\) representa el coeficiente que aparece en la i-ésima ecuación, que multiplica a la j-ésima variable. Por ejemplo, \(a_{21}\) es el coeficiente en la segunda ecuaciónm que multiplica a la variable \(x_1\). 
+El simbolo de parámetro con doble subíndice \((a_{mn})\) o \(a_{ij}\) representa el coeficiente que aparece en la i-ésima ecuación, que multiplica a la j-ésima variable. Por ejemplo, \(a_{21}\) es el coeficiente en la segunda ecuación que multiplica a la variable \(x_1\). 
 
 El parámetro \(d_m\) o \(d_i\) no está unido a ninguna variable, representa el término constante de la i-ésima ecuación. \(d_i\) es el término constante en la primera ecuación. 
 
@@ -73,8 +73,8 @@ d_m
 Por lo tanto, dado el sistema de ecuaciones lineales 
 $$
 \begin{aligned}
-    & 6x_1 + 3x_2 + x_3 = 22
-    & x_1 + 4x_2 - 2x_3 = 12
+    & 6x_1 + 3x_2 + x_3 = 22 \\
+    & x_1 + 4x_2 - 2x_3 = 12 \\
     & 4x_1 - x_2 + 5x_3 = 10
 \end{aligned}
 $$
@@ -125,6 +125,15 @@ Las matrices posibilitan expresar un sistema de ecuaciones en una forma mas comp
 
 Sin embargo la ecuación \(Ax = d\) nos lleva a preguntarnos ¿Cómo se multiplican dos matrices \(A\) y \(x\)?¿Qué denota la igualdad de \(Ax=d\)? Como las matrices implican bloques completos de números, las operaciones algebraicas familiares definidas para números simples no son directamente aplicables, por lo tanto necesitamos un nuevo conjunto de reglas.
 
+\begin{nota}
+Tip al armar matrices:
+\begin{itemize}
+    \item Matriz A (El "Cómo"): Contiene los coeficientes. Es la estructura del problema.
+    \item Vector x (El "Qué"): Contiene las incógnitas. Es lo que quieres resolver.
+    \item Vector d (El "Con qué"): Contiene los términos independientes. Son los recursos o datos iniciales.
+\end{itemize}
+\end{nota}
+
 \begin{ejercicio}
     \begin{enumerate}
         \item Reescriba el modelo de mercado 
@@ -173,7 +182,7 @@ Sin embargo la ecuación \(Ax = d\) nos lleva a preguntarnos ¿Cómo se multipli
         Q_s &= 4P-1
         \end{aligned}
         $$
-        en formato de matriz?¿Por qué>
+        en formato de matriz?¿Por qué?
         \item Reescriba el modelo de ingreso nacional 
         $$
         \begin{aligned}
@@ -191,5 +200,113 @@ Sin embargo la ecuación \(Ax = d\) nos lleva a preguntarnos ¿Cómo se multipli
         \end{aligned}
         $$
         con las variables en el orden \(Y, T\) y \(C\). \textit{Sugerencia}: Tenga cuidado con la expresión multiplicativa \(b(Y-T)\) en la función de consumo.
+    \end{enumerate}
+    \emph{Respuestas}
+    \begin{enumerate}
+        \item El modelo de mercado quedaria como
+        \[
+        A = \begin{bmatrix}
+            a & -b \\ 
+            -c & d
+        \end{bmatrix}
+        \quad
+        x = \begin{bmatrix}
+            1 \\
+            P
+        \end{bmatrix}
+        \quad
+        Ax = \begin{bmatrix}
+            Q_d \\
+            Q_s
+        \end{bmatrix}
+        \]
+        Si se disponen las tres variables en el orden \(Q_d\), \(Q_s\) y \(P\), la matriz quedaria como
+        \[
+        A = \begin{bmatrix}
+            1 & -1 & 0 \\
+            1 & 0 & b \\
+            0 & 1 & -d
+        \end{bmatrix}
+        \times
+        x = \begin{bmatrix}
+            Q_d \\
+            Q_s \\
+            P
+        \end{bmatrix}
+        = 
+        Ax = \begin{bmatrix}
+            0 \\
+            a \\
+            c
+        \end{bmatrix}
+        \]
+        El vector constantes es \(Ax\)
+        \item En formato matriz quedaria como
+        \[
+        A = \begin{bmatrix}
+            1 & -1 & 0 & 0 & 0 & 0 \\
+            1 & 0 & 0 & 0 & -a_1 & -a_2 \\
+            0 & 1 & 0 & 0 & -b_1 & -b_2 \\
+            0 & 0 & 1 & -1 & 0 & 0 \\
+            0 & 0 & 1 & 0 & -\alpha_1 & -\alpha_2 \\
+            0 & 0 & 1 & 0 & -\beta_1 & -\beta_2 \\
+        \end{bmatrix}
+        \times
+        x = \begin{bmatrix}
+            Q_{d1} \\
+            Q_{s1} \\
+            Q_{d2} \\
+            Q_{s2} \\
+            P_1 \\
+            P_2
+        \end{bmatrix}
+        = 
+        Ax = \begin{bmatrix}
+            0 \\
+            a_0 \\
+            b_0 \\
+            0 \\
+            \alpha_0 \\
+            \beta_0
+        \end{bmatrix}
+        \]
+        \item No, ya que el álgebra de matrices es para un sistema de ecuaciones lineales.
+        \item 
+        \[
+        A = \begin{bmatrix}
+            1 & -1 \\
+            b & 1 
+        \end{bmatrix}
+        \times
+        x = \begin{bmatrix}
+            Y \\
+            C 
+        \end{bmatrix}
+        =
+        \begin{bmatrix}
+            I_0 + G_0 \\
+            a
+        \end{bmatrix}
+        \]
+        \item 
+        \[
+        A = \begin{bmatrix}
+            1 & -1 & 0 \\
+            -b & 1 & b \\
+            -t & 0 & 1
+        \end{bmatrix}
+        \times
+        x = \begin{bmatrix}
+            Y \\
+            C \\
+            T 
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+            I_0 + G_0 \\
+            a \\
+            d
+        \end{bmatrix}
+        \]
     \end{enumerate}
 \end{ejercicio}
